@@ -1,0 +1,6603 @@
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building MY-TRIPLE 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.6.1:clean (default-clean) @ MY-TRIPLE ---
+[INFO] Deleting /media/ari-prasetiyo/ae9fa562-7875-470a-a44a-18829c16dc0f/PROJECT/GITHUB/MY-TRIPLE/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ MY-TRIPLE ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ MY-TRIPLE ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 74 source files to /media/ari-prasetiyo/ae9fa562-7875-470a-a44a-18829c16dc0f/PROJECT/GITHUB/MY-TRIPLE/target/classes
+[WARNING] /media/ari-prasetiyo/ae9fa562-7875-470a-a44a-18829c16dc0f/PROJECT/GITHUB/MY-TRIPLE/src/main/java/my/triple/services/AuthorizationServiceImpl.java: /media/ari-prasetiyo/ae9fa562-7875-470a-a44a-18829c16dc0f/PROJECT/GITHUB/MY-TRIPLE/src/main/java/my/triple/services/AuthorizationServiceImpl.java uses or overrides a deprecated API.
+[WARNING] /media/ari-prasetiyo/ae9fa562-7875-470a-a44a-18829c16dc0f/PROJECT/GITHUB/MY-TRIPLE/src/main/java/my/triple/services/AuthorizationServiceImpl.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ MY-TRIPLE ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 4 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ MY-TRIPLE ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 10 source files to /media/ari-prasetiyo/ae9fa562-7875-470a-a44a-18829c16dc0f/PROJECT/GITHUB/MY-TRIPLE/target/test-classes
+[WARNING] /media/ari-prasetiyo/ae9fa562-7875-470a-a44a-18829c16dc0f/PROJECT/GITHUB/MY-TRIPLE/src/test/java/my/triple/dao/AuthorizationTest.java: Some input files use or override a deprecated API.
+[WARNING] /media/ari-prasetiyo/ae9fa562-7875-470a-a44a-18829c16dc0f/PROJECT/GITHUB/MY-TRIPLE/src/test/java/my/triple/dao/AuthorizationTest.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.18.1:test (default-test) @ MY-TRIPLE ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.6:jar (default-jar) @ MY-TRIPLE ---
+[INFO] Building jar: /media/ari-prasetiyo/ae9fa562-7875-470a-a44a-18829c16dc0f/PROJECT/GITHUB/MY-TRIPLE/target/MY-TRIPLE-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:1.5.7.RELEASE:repackage (default) @ MY-TRIPLE ---
+[INFO] 
+[INFO] >>> spring-boot-maven-plugin:1.5.7.RELEASE:run (default-cli) @ MY-TRIPLE >>>
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ MY-TRIPLE ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ MY-TRIPLE ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ MY-TRIPLE ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 4 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ MY-TRIPLE ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] <<< spring-boot-maven-plugin:1.5.7.RELEASE:run (default-cli) @ MY-TRIPLE <<<
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:1.5.7.RELEASE:run (default-cli) @ MY-TRIPLE ---
+[INFO] Attaching agents: []
+Listening for transport dt_socket at address: 4002
+2018-02-11 21:07:21,851 main ERROR Unable to locate appender "App-File-Appender" for logger config "guru.springframework.blog.controllers"
+2018-02-11 21:07:21,855 main ERROR Unable to locate appender "SpringBoot-File-Appender" for logger config "org.springframework.web"
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.5.7.RELEASE)
+
+Hibernate: 
+    select
+        menusmodel2_.url as col_0_0_,
+        rolesmodel1_.role_name as col_1_0_ 
+    from
+        sys_authorization authorizat0_ 
+    left outer join
+        sys_roles rolesmodel1_ 
+            on authorizat0_.sys_roles_id=rolesmodel1_.id,
+        sys_menu menusmodel2_ 
+    where
+        authorizat0_.sys_menu_id=menusmodel2_.id 
+        and (
+            menusmodel2_.url is not null
+        ) 
+    order by
+        menusmodel2_.url
+Hibernate: 
+    select
+        rolesmodel0_.id as id1_3_,
+        rolesmodel0_.created_by as created_2_3_,
+        rolesmodel0_.created_time as created_3_3_,
+        rolesmodel0_.disabled as disabled4_3_,
+        rolesmodel0_.modified_by as modified5_3_,
+        rolesmodel0_.modified_time as modified6_3_,
+        rolesmodel0_.version as version7_3_,
+        rolesmodel0_.role_name as role_nam8_3_ 
+    from
+        sys_roles rolesmodel0_ 
+    where
+        rolesmodel0_.role_name in (
+            ?
+        ) 
+    order by
+        rolesmodel0_.id desc
+Hibernate: 
+    select
+        a.id as id ,
+        sm.menus_name as name_menu,
+        sm.url as pattern_dispatcher_url,
+        coalesce(a.parent_id,
+        0) as parent_id,
+        coalesce(b.con,
+        0) as con  
+    from
+        sys_authorization as a 
+    LEFT join
+        (
+            select
+                parent_id,
+                count(1) as con 
+            from
+                sys_authorization 
+            GROUP by
+                parent_id 
+        ) as b  
+            on a.id = b.parent_id  
+    left join
+        sys_menu sm 
+            on a.sys_menu_id = sm.id 
+    where
+        sys_roles_id in (
+            ?
+        ) 
+        and coalesce(a.parent_id, 0) = ?
+Hibernate: 
+    select
+        a.id as id ,
+        sm.menus_name as name_menu,
+        sm.url as pattern_dispatcher_url,
+        coalesce(a.parent_id,
+        0) as parent_id,
+        coalesce(b.con,
+        0) as con  
+    from
+        sys_authorization as a 
+    LEFT join
+        (
+            select
+                parent_id,
+                count(1) as con 
+            from
+                sys_authorization 
+            GROUP by
+                parent_id 
+        ) as b  
+            on a.id = b.parent_id  
+    left join
+        sys_menu sm 
+            on a.sys_menu_id = sm.id 
+    where
+        sys_roles_id in (
+            ?
+        ) 
+        and coalesce(a.parent_id, 0) = ?
+Hibernate: 
+    select
+        a.id as id ,
+        sm.menus_name as name_menu,
+        sm.url as pattern_dispatcher_url,
+        coalesce(a.parent_id,
+        0) as parent_id,
+        coalesce(b.con,
+        0) as con  
+    from
+        sys_authorization as a 
+    LEFT join
+        (
+            select
+                parent_id,
+                count(1) as con 
+            from
+                sys_authorization 
+            GROUP by
+                parent_id 
+        ) as b  
+            on a.id = b.parent_id  
+    left join
+        sys_menu sm 
+            on a.sys_menu_id = sm.id 
+    where
+        sys_roles_id in (
+            ?
+        ) 
+        and coalesce(a.parent_id, 0) = ?
+Hibernate: 
+    select
+        a.id as id ,
+        sm.menus_name as name_menu,
+        sm.url as pattern_dispatcher_url,
+        coalesce(a.parent_id,
+        0) as parent_id,
+        coalesce(b.con,
+        0) as con  
+    from
+        sys_authorization as a 
+    LEFT join
+        (
+            select
+                parent_id,
+                count(1) as con 
+            from
+                sys_authorization 
+            GROUP by
+                parent_id 
+        ) as b  
+            on a.id = b.parent_id  
+    left join
+        sys_menu sm 
+            on a.sys_menu_id = sm.id 
+    where
+        sys_roles_id in (
+            ?
+        ) 
+        and coalesce(a.parent_id, 0) = ?
+Hibernate: 
+    select
+        a.id as id ,
+        sm.menus_name as name_menu,
+        sm.url as pattern_dispatcher_url,
+        coalesce(a.parent_id,
+        0) as parent_id,
+        coalesce(b.con,
+        0) as con  
+    from
+        sys_authorization as a 
+    LEFT join
+        (
+            select
+                parent_id,
+                count(1) as con 
+            from
+                sys_authorization 
+            GROUP by
+                parent_id 
+        ) as b  
+            on a.id = b.parent_id  
+    left join
+        sys_menu sm 
+            on a.sys_menu_id = sm.id 
+    where
+        sys_roles_id in (
+            ?
+        ) 
+        and coalesce(a.parent_id, 0) = ?
+Hibernate: 
+    select
+        usermodel0_.id as id1_4_,
+        usermodel0_.created_by as created_2_4_,
+        usermodel0_.created_time as created_3_4_,
+        usermodel0_.disabled as disabled4_4_,
+        usermodel0_.modified_by as modified5_4_,
+        usermodel0_.modified_time as modified6_4_,
+        usermodel0_.version as version7_4_,
+        usermodel0_.email as email8_4_,
+        usermodel0_.is_active as is_activ9_4_,
+        usermodel0_.name as name10_4_,
+        usermodel0_.no_hp as no_hp11_4_,
+        usermodel0_.password as passwor12_4_,
+        usermodel0_.username as usernam13_4_ 
+    from
+        sys_user usermodel0_ 
+    where
+        usermodel0_.username=?
+Hibernate: 
+    select
+        userrolesm0_.sys_user_id as sys_user9_5_0_,
+        userrolesm0_.id as id1_5_0_,
+        userrolesm0_.id as id1_5_1_,
+        userrolesm0_.created_by as created_2_5_1_,
+        userrolesm0_.created_time as created_3_5_1_,
+        userrolesm0_.disabled as disabled4_5_1_,
+        userrolesm0_.modified_by as modified5_5_1_,
+        userrolesm0_.modified_time as modified6_5_1_,
+        userrolesm0_.version as version7_5_1_,
+        userrolesm0_.sys_roles_id as sys_role8_5_1_,
+        rolesmodel1_.id as id1_3_2_,
+        rolesmodel1_.created_by as created_2_3_2_,
+        rolesmodel1_.created_time as created_3_3_2_,
+        rolesmodel1_.disabled as disabled4_3_2_,
+        rolesmodel1_.modified_by as modified5_3_2_,
+        rolesmodel1_.modified_time as modified6_3_2_,
+        rolesmodel1_.version as version7_3_2_,
+        rolesmodel1_.role_name as role_nam8_3_2_ 
+    from
+        sys_user_roles userrolesm0_ 
+    inner join
+        sys_roles rolesmodel1_ 
+            on userrolesm0_.sys_roles_id=rolesmodel1_.id 
+    where
+        userrolesm0_.sys_user_id=?
+Hibernate: 
+    select
+        rolesmodel0_.id as id1_3_,
+        rolesmodel0_.created_by as created_2_3_,
+        rolesmodel0_.created_time as created_3_3_,
+        rolesmodel0_.disabled as disabled4_3_,
+        rolesmodel0_.modified_by as modified5_3_,
+        rolesmodel0_.modified_time as modified6_3_,
+        rolesmodel0_.version as version7_3_,
+        rolesmodel0_.role_name as role_nam8_3_ 
+    from
+        sys_roles rolesmodel0_
+Hibernate: 
+    select
+        rolesmodel0_.id as id1_3_,
+        rolesmodel0_.created_by as created_2_3_,
+        rolesmodel0_.created_time as created_3_3_,
+        rolesmodel0_.disabled as disabled4_3_,
+        rolesmodel0_.modified_by as modified5_3_,
+        rolesmodel0_.modified_time as modified6_3_,
+        rolesmodel0_.version as version7_3_,
+        rolesmodel0_.role_name as role_nam8_3_ 
+    from
+        sys_roles rolesmodel0_ 
+    where
+        rolesmodel0_.role_name in (
+            ?
+        ) 
+    order by
+        rolesmodel0_.id desc
+Hibernate: 
+    select
+        a.id as id ,
+        sm.menus_name as name_menu,
+        sm.url as pattern_dispatcher_url,
+        coalesce(a.parent_id,
+        0) as parent_id,
+        coalesce(b.con,
+        0) as con  
+    from
+        sys_authorization as a 
+    LEFT join
+        (
+            select
+                parent_id,
+                count(1) as con 
+            from
+                sys_authorization 
+            GROUP by
+                parent_id 
+        ) as b  
+            on a.id = b.parent_id  
+    left join
+        sys_menu sm 
+            on a.sys_menu_id = sm.id 
+    where
+        sys_roles_id in (
+            ?
+        ) 
+        and coalesce(a.parent_id, 0) = ?
+Hibernate: 
+    select
+        a.id as id ,
+        sm.menus_name as name_menu,
+        sm.url as pattern_dispatcher_url,
+        coalesce(a.parent_id,
+        0) as parent_id,
+        coalesce(b.con,
+        0) as con  
+    from
+        sys_authorization as a 
+    LEFT join
+        (
+            select
+                parent_id,
+                count(1) as con 
+            from
+                sys_authorization 
+            GROUP by
+                parent_id 
+        ) as b  
+            on a.id = b.parent_id  
+    left join
+        sys_menu sm 
+            on a.sys_menu_id = sm.id 
+    where
+        sys_roles_id in (
+            ?
+        ) 
+        and coalesce(a.parent_id, 0) = ?
+Hibernate: 
+    select
+        a.id as id ,
+        sm.menus_name as name_menu,
+        sm.url as pattern_dispatcher_url,
+        coalesce(a.parent_id,
+        0) as parent_id,
+        coalesce(b.con,
+        0) as con  
+    from
+        sys_authorization as a 
+    LEFT join
+        (
+            select
+                parent_id,
+                count(1) as con 
+            from
+                sys_authorization 
+            GROUP by
+                parent_id 
+        ) as b  
+            on a.id = b.parent_id  
+    left join
+        sys_menu sm 
+            on a.sys_menu_id = sm.id 
+    where
+        sys_roles_id in (
+            ?
+        ) 
+        and coalesce(a.parent_id, 0) = ?
+Hibernate: 
+    select
+        a.id as id ,
+        sm.menus_name as name_menu,
+        sm.url as pattern_dispatcher_url,
+        coalesce(a.parent_id,
+        0) as parent_id,
+        coalesce(b.con,
+        0) as con  
+    from
+        sys_authorization as a 
+    LEFT join
+        (
+            select
+                parent_id,
+                count(1) as con 
+            from
+                sys_authorization 
+            GROUP by
+                parent_id 
+        ) as b  
+            on a.id = b.parent_id  
+    left join
+        sys_menu sm 
+            on a.sys_menu_id = sm.id 
+    where
+        sys_roles_id in (
+            ?
+        ) 
+        and coalesce(a.parent_id, 0) = ?
+Hibernate: 
+    select
+        a.id as id ,
+        sm.menus_name as name_menu,
+        sm.url as pattern_dispatcher_url,
+        coalesce(a.parent_id,
+        0) as parent_id,
+        coalesce(b.con,
+        0) as con  
+    from
+        sys_authorization as a 
+    LEFT join
+        (
+            select
+                parent_id,
+                count(1) as con 
+            from
+                sys_authorization 
+            GROUP by
+                parent_id 
+        ) as b  
+            on a.id = b.parent_id  
+    left join
+        sys_menu sm 
+            on a.sys_menu_id = sm.id 
+    where
+        sys_roles_id in (
+            ?
+        ) 
+        and coalesce(a.parent_id, 0) = ?
+Hibernate: 
+    select
+        rolesmodel0_.id as id1_3_,
+        rolesmodel0_.created_by as created_2_3_,
+        rolesmodel0_.created_time as created_3_3_,
+        rolesmodel0_.disabled as disabled4_3_,
+        rolesmodel0_.modified_by as modified5_3_,
+        rolesmodel0_.modified_time as modified6_3_,
+        rolesmodel0_.version as version7_3_,
+        rolesmodel0_.role_name as role_nam8_3_ 
+    from
+        sys_roles rolesmodel0_
+Hibernate: 
+    select
+        usermodel0_.id as id1_4_,
+        usermodel0_.created_by as created_2_4_,
+        usermodel0_.created_time as created_3_4_,
+        usermodel0_.disabled as disabled4_4_,
+        usermodel0_.modified_by as modified5_4_,
+        usermodel0_.modified_time as modified6_4_,
+        usermodel0_.version as version7_4_,
+        usermodel0_.email as email8_4_,
+        usermodel0_.is_active as is_activ9_4_,
+        usermodel0_.name as name10_4_,
+        usermodel0_.no_hp as no_hp11_4_,
+        usermodel0_.password as passwor12_4_,
+        usermodel0_.username as usernam13_4_ 
+    from
+        sys_user usermodel0_ 
+    order by
+        usermodel0_.username asc limit ?
+Hibernate: 
+    select
+        userrolesm0_.sys_user_id as sys_user9_5_0_,
+        userrolesm0_.id as id1_5_0_,
+        userrolesm0_.id as id1_5_1_,
+        userrolesm0_.created_by as created_2_5_1_,
+        userrolesm0_.created_time as created_3_5_1_,
+        userrolesm0_.disabled as disabled4_5_1_,
+        userrolesm0_.modified_by as modified5_5_1_,
+        userrolesm0_.modified_time as modified6_5_1_,
+        userrolesm0_.version as version7_5_1_,
+        userrolesm0_.sys_roles_id as sys_role8_5_1_,
+        rolesmodel1_.id as id1_3_2_,
+        rolesmodel1_.created_by as created_2_3_2_,
+        rolesmodel1_.created_time as created_3_3_2_,
+        rolesmodel1_.disabled as disabled4_3_2_,
+        rolesmodel1_.modified_by as modified5_3_2_,
+        rolesmodel1_.modified_time as modified6_3_2_,
+        rolesmodel1_.version as version7_3_2_,
+        rolesmodel1_.role_name as role_nam8_3_2_ 
+    from
+        sys_user_roles userrolesm0_ 
+    inner join
+        sys_roles rolesmodel1_ 
+            on userrolesm0_.sys_roles_id=rolesmodel1_.id 
+    where
+        userrolesm0_.sys_user_id=?
+Hibernate: 
+    select
+        userrolesm0_.sys_user_id as sys_user9_5_0_,
+        userrolesm0_.id as id1_5_0_,
+        userrolesm0_.id as id1_5_1_,
+        userrolesm0_.created_by as created_2_5_1_,
+        userrolesm0_.created_time as created_3_5_1_,
+        userrolesm0_.disabled as disabled4_5_1_,
+        userrolesm0_.modified_by as modified5_5_1_,
+        userrolesm0_.modified_time as modified6_5_1_,
+        userrolesm0_.version as version7_5_1_,
+        userrolesm0_.sys_roles_id as sys_role8_5_1_,
+        rolesmodel1_.id as id1_3_2_,
+        rolesmodel1_.created_by as created_2_3_2_,
+        rolesmodel1_.created_time as created_3_3_2_,
+        rolesmodel1_.disabled as disabled4_3_2_,
+        rolesmodel1_.modified_by as modified5_3_2_,
+        rolesmodel1_.modified_time as modified6_3_2_,
+        rolesmodel1_.version as version7_3_2_,
+        rolesmodel1_.role_name as role_nam8_3_2_ 
+    from
+        sys_user_roles userrolesm0_ 
+    inner join
+        sys_roles rolesmodel1_ 
+            on userrolesm0_.sys_roles_id=rolesmodel1_.id 
+    where
+        userrolesm0_.sys_user_id=?
+Hibernate: 
+    select
+        userrolesm0_.sys_user_id as sys_user9_5_0_,
+        userrolesm0_.id as id1_5_0_,
+        userrolesm0_.id as id1_5_1_,
+        userrolesm0_.created_by as created_2_5_1_,
+        userrolesm0_.created_time as created_3_5_1_,
+        userrolesm0_.disabled as disabled4_5_1_,
+        userrolesm0_.modified_by as modified5_5_1_,
+        userrolesm0_.modified_time as modified6_5_1_,
+        userrolesm0_.version as version7_5_1_,
+        userrolesm0_.sys_roles_id as sys_role8_5_1_,
+        rolesmodel1_.id as id1_3_2_,
+        rolesmodel1_.created_by as created_2_3_2_,
+        rolesmodel1_.created_time as created_3_3_2_,
+        rolesmodel1_.disabled as disabled4_3_2_,
+        rolesmodel1_.modified_by as modified5_3_2_,
+        rolesmodel1_.modified_time as modified6_3_2_,
+        rolesmodel1_.version as version7_3_2_,
+        rolesmodel1_.role_name as role_nam8_3_2_ 
+    from
+        sys_user_roles userrolesm0_ 
+    inner join
+        sys_roles rolesmodel1_ 
+            on userrolesm0_.sys_roles_id=rolesmodel1_.id 
+    where
+        userrolesm0_.sys_user_id=?
+Hibernate: 
+    select
+        count(*) as col_0_0_ 
+    from
+        sys_user usermodel0_
+Hibernate: 
+    select
+        rolesmodel0_.id as id1_3_,
+        rolesmodel0_.created_by as created_2_3_,
+        rolesmodel0_.created_time as created_3_3_,
+        rolesmodel0_.disabled as disabled4_3_,
+        rolesmodel0_.modified_by as modified5_3_,
+        rolesmodel0_.modified_time as modified6_3_,
+        rolesmodel0_.version as version7_3_,
+        rolesmodel0_.role_name as role_nam8_3_ 
+    from
+        sys_roles rolesmodel0_ 
+    where
+        rolesmodel0_.role_name in (
+            ?
+        ) 
+    order by
+        rolesmodel0_.id desc
+Hibernate: 
+    select
+        a.id as id ,
+        sm.menus_name as name_menu,
+        sm.url as pattern_dispatcher_url,
+        coalesce(a.parent_id,
+        0) as parent_id,
+        coalesce(b.con,
+        0) as con  
+    from
+        sys_authorization as a 
+    LEFT join
+        (
+            select
+                parent_id,
+                count(1) as con 
+            from
+                sys_authorization 
+            GROUP by
+                parent_id 
+        ) as b  
+            on a.id = b.parent_id  
+    left join
+        sys_menu sm 
+            on a.sys_menu_id = sm.id 
+    where
+        sys_roles_id in (
+            ?
+        ) 
+        and coalesce(a.parent_id, 0) = ?
+Hibernate: 
+    select
+        a.id as id ,
+        sm.menus_name as name_menu,
+        sm.url as pattern_dispatcher_url,
+        coalesce(a.parent_id,
+        0) as parent_id,
+        coalesce(b.con,
+        0) as con  
+    from
+        sys_authorization as a 
+    LEFT join
+        (
+            select
+                parent_id,
+                count(1) as con 
+            from
+                sys_authorization 
+            GROUP by
+                parent_id 
+        ) as b  
+            on a.id = b.parent_id  
+    left join
+        sys_menu sm 
+            on a.sys_menu_id = sm.id 
+    where
+        sys_roles_id in (
+            ?
+        ) 
+        and coalesce(a.parent_id, 0) = ?
+Hibernate: 
+    select
+        a.id as id ,
+        sm.menus_name as name_menu,
+        sm.url as pattern_dispatcher_url,
+        coalesce(a.parent_id,
+        0) as parent_id,
+        coalesce(b.con,
+        0) as con  
+    from
+        sys_authorization as a 
+    LEFT join
+        (
+            select
+                parent_id,
+                count(1) as con 
+            from
+                sys_authorization 
+            GROUP by
+                parent_id 
+        ) as b  
+            on a.id = b.parent_id  
+    left join
+        sys_menu sm 
+            on a.sys_menu_id = sm.id 
+    where
+        sys_roles_id in (
+            ?
+        ) 
+        and coalesce(a.parent_id, 0) = ?
+Hibernate: 
+    select
+        a.id as id ,
+        sm.menus_name as name_menu,
+        sm.url as pattern_dispatcher_url,
+        coalesce(a.parent_id,
+        0) as parent_id,
+        coalesce(b.con,
+        0) as con  
+    from
+        sys_authorization as a 
+    LEFT join
+        (
+            select
+                parent_id,
+                count(1) as con 
+            from
+                sys_authorization 
+            GROUP by
+                parent_id 
+        ) as b  
+            on a.id = b.parent_id  
+    left join
+        sys_menu sm 
+            on a.sys_menu_id = sm.id 
+    where
+        sys_roles_id in (
+            ?
+        ) 
+        and coalesce(a.parent_id, 0) = ?
+Hibernate: 
+    select
+        a.id as id ,
+        sm.menus_name as name_menu,
+        sm.url as pattern_dispatcher_url,
+        coalesce(a.parent_id,
+        0) as parent_id,
+        coalesce(b.con,
+        0) as con  
+    from
+        sys_authorization as a 
+    LEFT join
+        (
+            select
+                parent_id,
+                count(1) as con 
+            from
+                sys_authorization 
+            GROUP by
+                parent_id 
+        ) as b  
+            on a.id = b.parent_id  
+    left join
+        sys_menu sm 
+            on a.sys_menu_id = sm.id 
+    where
+        sys_roles_id in (
+            ?
+        ) 
+        and coalesce(a.parent_id, 0) = ?
+Hibernate: 
+    select
+        rolesmodel0_.id as id1_3_,
+        rolesmodel0_.created_by as created_2_3_,
+        rolesmodel0_.created_time as created_3_3_,
+        rolesmodel0_.disabled as disabled4_3_,
+        rolesmodel0_.modified_by as modified5_3_,
+        rolesmodel0_.modified_time as modified6_3_,
+        rolesmodel0_.version as version7_3_,
+        rolesmodel0_.role_name as role_nam8_3_ 
+    from
+        sys_roles rolesmodel0_
+Hibernate: 
+    select
+        menusmodel0_.id as id1_2_,
+        menusmodel0_.created_by as created_2_2_,
+        menusmodel0_.created_time as created_3_2_,
+        menusmodel0_.disabled as disabled4_2_,
+        menusmodel0_.modified_by as modified5_2_,
+        menusmodel0_.modified_time as modified6_2_,
+        menusmodel0_.version as version7_2_,
+        menusmodel0_.menus_name as menus_na8_2_,
+        menusmodel0_.url as url9_2_ 
+    from
+        sys_menu menusmodel0_
+Hibernate: 
+    select
+        authorizat0_.id as id1_1_,
+        authorizat0_.created_by as created_2_1_,
+        authorizat0_.created_time as created_3_1_,
+        authorizat0_.disabled as disabled4_1_,
+        authorizat0_.modified_by as modified5_1_,
+        authorizat0_.modified_time as modified6_1_,
+        authorizat0_.version as version7_1_,
+        authorizat0_.is_delete as is_delet8_1_,
+        authorizat0_.is_insert as is_inser9_1_,
+        authorizat0_.is_read as is_read10_1_,
+        authorizat0_.is_update as is_upda11_1_,
+        authorizat0_.parent_id as parent_12_1_,
+        authorizat0_.sys_menu_id as sys_men13_1_,
+        authorizat0_.sys_roles_id as sys_rol14_1_ 
+    from
+        sys_authorization authorizat0_ cross 
+    join
+        sys_menu menusmodel1_ 
+    where
+        authorizat0_.sys_menu_id=menusmodel1_.id 
+        and authorizat0_.sys_roles_id=? 
+        and (
+            menusmodel1_.menus_name is not null
+        )
+Hibernate: 
+    select
+        count(authorizat0_.id) as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.sys_roles_id=?
+Hibernate: 
+    select
+        authorizat0_.id as id1_1_0_,
+        rolesmodel1_.id as id1_3_1_,
+        menusmodel2_.id as id1_2_2_,
+        authorizat0_.created_by as created_2_1_0_,
+        authorizat0_.created_time as created_3_1_0_,
+        authorizat0_.disabled as disabled4_1_0_,
+        authorizat0_.modified_by as modified5_1_0_,
+        authorizat0_.modified_time as modified6_1_0_,
+        authorizat0_.version as version7_1_0_,
+        authorizat0_.is_delete as is_delet8_1_0_,
+        authorizat0_.is_insert as is_inser9_1_0_,
+        authorizat0_.is_read as is_read10_1_0_,
+        authorizat0_.is_update as is_upda11_1_0_,
+        authorizat0_.parent_id as parent_12_1_0_,
+        authorizat0_.sys_menu_id as sys_men13_1_0_,
+        authorizat0_.sys_roles_id as sys_rol14_1_0_,
+        rolesmodel1_.created_by as created_2_3_1_,
+        rolesmodel1_.created_time as created_3_3_1_,
+        rolesmodel1_.disabled as disabled4_3_1_,
+        rolesmodel1_.modified_by as modified5_3_1_,
+        rolesmodel1_.modified_time as modified6_3_1_,
+        rolesmodel1_.version as version7_3_1_,
+        rolesmodel1_.role_name as role_nam8_3_1_,
+        menusmodel2_.created_by as created_2_2_2_,
+        menusmodel2_.created_time as created_3_2_2_,
+        menusmodel2_.disabled as disabled4_2_2_,
+        menusmodel2_.modified_by as modified5_2_2_,
+        menusmodel2_.modified_time as modified6_2_2_,
+        menusmodel2_.version as version7_2_2_,
+        menusmodel2_.menus_name as menus_na8_2_2_,
+        menusmodel2_.url as url9_2_2_ 
+    from
+        sys_authorization authorizat0_ 
+    inner join
+        sys_roles rolesmodel1_ 
+            on authorizat0_.sys_roles_id=rolesmodel1_.id 
+    inner join
+        sys_menu menusmodel2_ 
+            on authorizat0_.sys_menu_id=menusmodel2_.id 
+    where
+        rolesmodel1_.id=? 
+        and (
+            menusmodel2_.menus_name is not null
+        ) limit ?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        rolesmodel0_.id as id1_3_,
+        rolesmodel0_.created_by as created_2_3_,
+        rolesmodel0_.created_time as created_3_3_,
+        rolesmodel0_.disabled as disabled4_3_,
+        rolesmodel0_.modified_by as modified5_3_,
+        rolesmodel0_.modified_time as modified6_3_,
+        rolesmodel0_.version as version7_3_,
+        rolesmodel0_.role_name as role_nam8_3_ 
+    from
+        sys_roles rolesmodel0_ 
+    where
+        rolesmodel0_.role_name in (
+            ?
+        ) 
+    order by
+        rolesmodel0_.id desc
+Hibernate: 
+    select
+        a.id as id ,
+        sm.menus_name as name_menu,
+        sm.url as pattern_dispatcher_url,
+        coalesce(a.parent_id,
+        0) as parent_id,
+        coalesce(b.con,
+        0) as con  
+    from
+        sys_authorization as a 
+    LEFT join
+        (
+            select
+                parent_id,
+                count(1) as con 
+            from
+                sys_authorization 
+            GROUP by
+                parent_id 
+        ) as b  
+            on a.id = b.parent_id  
+    left join
+        sys_menu sm 
+            on a.sys_menu_id = sm.id 
+    where
+        sys_roles_id in (
+            ?
+        ) 
+        and coalesce(a.parent_id, 0) = ?
+Hibernate: 
+    select
+        a.id as id ,
+        sm.menus_name as name_menu,
+        sm.url as pattern_dispatcher_url,
+        coalesce(a.parent_id,
+        0) as parent_id,
+        coalesce(b.con,
+        0) as con  
+    from
+        sys_authorization as a 
+    LEFT join
+        (
+            select
+                parent_id,
+                count(1) as con 
+            from
+                sys_authorization 
+            GROUP by
+                parent_id 
+        ) as b  
+            on a.id = b.parent_id  
+    left join
+        sys_menu sm 
+            on a.sys_menu_id = sm.id 
+    where
+        sys_roles_id in (
+            ?
+        ) 
+        and coalesce(a.parent_id, 0) = ?
+Hibernate: 
+    select
+        a.id as id ,
+        sm.menus_name as name_menu,
+        sm.url as pattern_dispatcher_url,
+        coalesce(a.parent_id,
+        0) as parent_id,
+        coalesce(b.con,
+        0) as con  
+    from
+        sys_authorization as a 
+    LEFT join
+        (
+            select
+                parent_id,
+                count(1) as con 
+            from
+                sys_authorization 
+            GROUP by
+                parent_id 
+        ) as b  
+            on a.id = b.parent_id  
+    left join
+        sys_menu sm 
+            on a.sys_menu_id = sm.id 
+    where
+        sys_roles_id in (
+            ?
+        ) 
+        and coalesce(a.parent_id, 0) = ?
+Hibernate: 
+    select
+        a.id as id ,
+        sm.menus_name as name_menu,
+        sm.url as pattern_dispatcher_url,
+        coalesce(a.parent_id,
+        0) as parent_id,
+        coalesce(b.con,
+        0) as con  
+    from
+        sys_authorization as a 
+    LEFT join
+        (
+            select
+                parent_id,
+                count(1) as con 
+            from
+                sys_authorization 
+            GROUP by
+                parent_id 
+        ) as b  
+            on a.id = b.parent_id  
+    left join
+        sys_menu sm 
+            on a.sys_menu_id = sm.id 
+    where
+        sys_roles_id in (
+            ?
+        ) 
+        and coalesce(a.parent_id, 0) = ?
+Hibernate: 
+    select
+        a.id as id ,
+        sm.menus_name as name_menu,
+        sm.url as pattern_dispatcher_url,
+        coalesce(a.parent_id,
+        0) as parent_id,
+        coalesce(b.con,
+        0) as con  
+    from
+        sys_authorization as a 
+    LEFT join
+        (
+            select
+                parent_id,
+                count(1) as con 
+            from
+                sys_authorization 
+            GROUP by
+                parent_id 
+        ) as b  
+            on a.id = b.parent_id  
+    left join
+        sys_menu sm 
+            on a.sys_menu_id = sm.id 
+    where
+        sys_roles_id in (
+            ?
+        ) 
+        and coalesce(a.parent_id, 0) = ?
+Hibernate: 
+    select
+        rolesmodel0_.id as id1_3_,
+        rolesmodel0_.created_by as created_2_3_,
+        rolesmodel0_.created_time as created_3_3_,
+        rolesmodel0_.disabled as disabled4_3_,
+        rolesmodel0_.modified_by as modified5_3_,
+        rolesmodel0_.modified_time as modified6_3_,
+        rolesmodel0_.version as version7_3_,
+        rolesmodel0_.role_name as role_nam8_3_ 
+    from
+        sys_roles rolesmodel0_
+Hibernate: 
+    select
+        rolesmodel0_.id as id1_3_,
+        rolesmodel0_.created_by as created_2_3_,
+        rolesmodel0_.created_time as created_3_3_,
+        rolesmodel0_.disabled as disabled4_3_,
+        rolesmodel0_.modified_by as modified5_3_,
+        rolesmodel0_.modified_time as modified6_3_,
+        rolesmodel0_.version as version7_3_,
+        rolesmodel0_.role_name as role_nam8_3_ 
+    from
+        sys_roles rolesmodel0_ 
+    order by
+        rolesmodel0_.role_name asc limit ?
+Hibernate: 
+    select
+        count(*) as col_0_0_ 
+    from
+        sys_roles rolesmodel0_
+Hibernate: 
+    select
+        authorizat0_.id as id1_1_0_,
+        rolesmodel1_.id as id1_3_1_,
+        menusmodel2_.id as id1_2_2_,
+        authorizat0_.created_by as created_2_1_0_,
+        authorizat0_.created_time as created_3_1_0_,
+        authorizat0_.disabled as disabled4_1_0_,
+        authorizat0_.modified_by as modified5_1_0_,
+        authorizat0_.modified_time as modified6_1_0_,
+        authorizat0_.version as version7_1_0_,
+        authorizat0_.is_delete as is_delet8_1_0_,
+        authorizat0_.is_insert as is_inser9_1_0_,
+        authorizat0_.is_read as is_read10_1_0_,
+        authorizat0_.is_update as is_upda11_1_0_,
+        authorizat0_.parent_id as parent_12_1_0_,
+        authorizat0_.sys_menu_id as sys_men13_1_0_,
+        authorizat0_.sys_roles_id as sys_rol14_1_0_,
+        rolesmodel1_.created_by as created_2_3_1_,
+        rolesmodel1_.created_time as created_3_3_1_,
+        rolesmodel1_.disabled as disabled4_3_1_,
+        rolesmodel1_.modified_by as modified5_3_1_,
+        rolesmodel1_.modified_time as modified6_3_1_,
+        rolesmodel1_.version as version7_3_1_,
+        rolesmodel1_.role_name as role_nam8_3_1_,
+        menusmodel2_.created_by as created_2_2_2_,
+        menusmodel2_.created_time as created_3_2_2_,
+        menusmodel2_.disabled as disabled4_2_2_,
+        menusmodel2_.modified_by as modified5_2_2_,
+        menusmodel2_.modified_time as modified6_2_2_,
+        menusmodel2_.version as version7_2_2_,
+        menusmodel2_.menus_name as menus_na8_2_2_,
+        menusmodel2_.url as url9_2_2_ 
+    from
+        sys_authorization authorizat0_ 
+    inner join
+        sys_roles rolesmodel1_ 
+            on authorizat0_.sys_roles_id=rolesmodel1_.id 
+    inner join
+        sys_menu menusmodel2_ 
+            on authorizat0_.sys_menu_id=menusmodel2_.id 
+    where
+        rolesmodel1_.id=? 
+        and (
+            menusmodel2_.menus_name is not null
+        ) limit ?
+Hibernate: 
+    select
+        count(authorizat0_.id) as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.sys_roles_id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        usermodel0_.id as id1_4_,
+        usermodel0_.created_by as created_2_4_,
+        usermodel0_.created_time as created_3_4_,
+        usermodel0_.disabled as disabled4_4_,
+        usermodel0_.modified_by as modified5_4_,
+        usermodel0_.modified_time as modified6_4_,
+        usermodel0_.version as version7_4_,
+        usermodel0_.email as email8_4_,
+        usermodel0_.is_active as is_activ9_4_,
+        usermodel0_.name as name10_4_,
+        usermodel0_.no_hp as no_hp11_4_,
+        usermodel0_.password as passwor12_4_,
+        usermodel0_.username as usernam13_4_ 
+    from
+        sys_user usermodel0_ 
+    order by
+        usermodel0_.username asc limit ?
+Hibernate: 
+    select
+        userrolesm0_.sys_user_id as sys_user9_5_0_,
+        userrolesm0_.id as id1_5_0_,
+        userrolesm0_.id as id1_5_1_,
+        userrolesm0_.created_by as created_2_5_1_,
+        userrolesm0_.created_time as created_3_5_1_,
+        userrolesm0_.disabled as disabled4_5_1_,
+        userrolesm0_.modified_by as modified5_5_1_,
+        userrolesm0_.modified_time as modified6_5_1_,
+        userrolesm0_.version as version7_5_1_,
+        userrolesm0_.sys_roles_id as sys_role8_5_1_,
+        rolesmodel1_.id as id1_3_2_,
+        rolesmodel1_.created_by as created_2_3_2_,
+        rolesmodel1_.created_time as created_3_3_2_,
+        rolesmodel1_.disabled as disabled4_3_2_,
+        rolesmodel1_.modified_by as modified5_3_2_,
+        rolesmodel1_.modified_time as modified6_3_2_,
+        rolesmodel1_.version as version7_3_2_,
+        rolesmodel1_.role_name as role_nam8_3_2_ 
+    from
+        sys_user_roles userrolesm0_ 
+    inner join
+        sys_roles rolesmodel1_ 
+            on userrolesm0_.sys_roles_id=rolesmodel1_.id 
+    where
+        userrolesm0_.sys_user_id=?
+Hibernate: 
+    select
+        count(*) as col_0_0_ 
+    from
+        sys_user usermodel0_
+Hibernate: 
+    select
+        userrolesm0_.sys_user_id as sys_user9_5_0_,
+        userrolesm0_.id as id1_5_0_,
+        userrolesm0_.id as id1_5_1_,
+        userrolesm0_.created_by as created_2_5_1_,
+        userrolesm0_.created_time as created_3_5_1_,
+        userrolesm0_.disabled as disabled4_5_1_,
+        userrolesm0_.modified_by as modified5_5_1_,
+        userrolesm0_.modified_time as modified6_5_1_,
+        userrolesm0_.version as version7_5_1_,
+        userrolesm0_.sys_roles_id as sys_role8_5_1_,
+        rolesmodel1_.id as id1_3_2_,
+        rolesmodel1_.created_by as created_2_3_2_,
+        rolesmodel1_.created_time as created_3_3_2_,
+        rolesmodel1_.disabled as disabled4_3_2_,
+        rolesmodel1_.modified_by as modified5_3_2_,
+        rolesmodel1_.modified_time as modified6_3_2_,
+        rolesmodel1_.version as version7_3_2_,
+        rolesmodel1_.role_name as role_nam8_3_2_ 
+    from
+        sys_user_roles userrolesm0_ 
+    inner join
+        sys_roles rolesmodel1_ 
+            on userrolesm0_.sys_roles_id=rolesmodel1_.id 
+    where
+        userrolesm0_.sys_user_id=?
+Hibernate: 
+    select
+        userrolesm0_.sys_user_id as sys_user9_5_0_,
+        userrolesm0_.id as id1_5_0_,
+        userrolesm0_.id as id1_5_1_,
+        userrolesm0_.created_by as created_2_5_1_,
+        userrolesm0_.created_time as created_3_5_1_,
+        userrolesm0_.disabled as disabled4_5_1_,
+        userrolesm0_.modified_by as modified5_5_1_,
+        userrolesm0_.modified_time as modified6_5_1_,
+        userrolesm0_.version as version7_5_1_,
+        userrolesm0_.sys_roles_id as sys_role8_5_1_,
+        rolesmodel1_.id as id1_3_2_,
+        rolesmodel1_.created_by as created_2_3_2_,
+        rolesmodel1_.created_time as created_3_3_2_,
+        rolesmodel1_.disabled as disabled4_3_2_,
+        rolesmodel1_.modified_by as modified5_3_2_,
+        rolesmodel1_.modified_time as modified6_3_2_,
+        rolesmodel1_.version as version7_3_2_,
+        rolesmodel1_.role_name as role_nam8_3_2_ 
+    from
+        sys_user_roles userrolesm0_ 
+    inner join
+        sys_roles rolesmodel1_ 
+            on userrolesm0_.sys_roles_id=rolesmodel1_.id 
+    where
+        userrolesm0_.sys_user_id=?
+Hibernate: 
+    select
+        authorizat0_.id as id1_1_0_,
+        rolesmodel1_.id as id1_3_1_,
+        menusmodel2_.id as id1_2_2_,
+        authorizat0_.created_by as created_2_1_0_,
+        authorizat0_.created_time as created_3_1_0_,
+        authorizat0_.disabled as disabled4_1_0_,
+        authorizat0_.modified_by as modified5_1_0_,
+        authorizat0_.modified_time as modified6_1_0_,
+        authorizat0_.version as version7_1_0_,
+        authorizat0_.is_delete as is_delet8_1_0_,
+        authorizat0_.is_insert as is_inser9_1_0_,
+        authorizat0_.is_read as is_read10_1_0_,
+        authorizat0_.is_update as is_upda11_1_0_,
+        authorizat0_.parent_id as parent_12_1_0_,
+        authorizat0_.sys_menu_id as sys_men13_1_0_,
+        authorizat0_.sys_roles_id as sys_rol14_1_0_,
+        rolesmodel1_.created_by as created_2_3_1_,
+        rolesmodel1_.created_time as created_3_3_1_,
+        rolesmodel1_.disabled as disabled4_3_1_,
+        rolesmodel1_.modified_by as modified5_3_1_,
+        rolesmodel1_.modified_time as modified6_3_1_,
+        rolesmodel1_.version as version7_3_1_,
+        rolesmodel1_.role_name as role_nam8_3_1_,
+        menusmodel2_.created_by as created_2_2_2_,
+        menusmodel2_.created_time as created_3_2_2_,
+        menusmodel2_.disabled as disabled4_2_2_,
+        menusmodel2_.modified_by as modified5_2_2_,
+        menusmodel2_.modified_time as modified6_2_2_,
+        menusmodel2_.version as version7_2_2_,
+        menusmodel2_.menus_name as menus_na8_2_2_,
+        menusmodel2_.url as url9_2_2_ 
+    from
+        sys_authorization authorizat0_ 
+    inner join
+        sys_roles rolesmodel1_ 
+            on authorizat0_.sys_roles_id=rolesmodel1_.id 
+    inner join
+        sys_menu menusmodel2_ 
+            on authorizat0_.sys_menu_id=menusmodel2_.id 
+    where
+        rolesmodel1_.id=? 
+        and (
+            menusmodel2_.menus_name is not null
+        ) limit ?
+Hibernate: 
+    select
+        count(authorizat0_.id) as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.sys_roles_id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        rolesmodel0_.id as id1_3_,
+        rolesmodel0_.created_by as created_2_3_,
+        rolesmodel0_.created_time as created_3_3_,
+        rolesmodel0_.disabled as disabled4_3_,
+        rolesmodel0_.modified_by as modified5_3_,
+        rolesmodel0_.modified_time as modified6_3_,
+        rolesmodel0_.version as version7_3_,
+        rolesmodel0_.role_name as role_nam8_3_ 
+    from
+        sys_roles rolesmodel0_ 
+    order by
+        rolesmodel0_.role_name asc limit ?
+Hibernate: 
+    select
+        count(*) as col_0_0_ 
+    from
+        sys_roles rolesmodel0_
+Hibernate: 
+    select
+        authorizat0_.id as id1_1_0_,
+        rolesmodel1_.id as id1_3_1_,
+        menusmodel2_.id as id1_2_2_,
+        authorizat0_.created_by as created_2_1_0_,
+        authorizat0_.created_time as created_3_1_0_,
+        authorizat0_.disabled as disabled4_1_0_,
+        authorizat0_.modified_by as modified5_1_0_,
+        authorizat0_.modified_time as modified6_1_0_,
+        authorizat0_.version as version7_1_0_,
+        authorizat0_.is_delete as is_delet8_1_0_,
+        authorizat0_.is_insert as is_inser9_1_0_,
+        authorizat0_.is_read as is_read10_1_0_,
+        authorizat0_.is_update as is_upda11_1_0_,
+        authorizat0_.parent_id as parent_12_1_0_,
+        authorizat0_.sys_menu_id as sys_men13_1_0_,
+        authorizat0_.sys_roles_id as sys_rol14_1_0_,
+        rolesmodel1_.created_by as created_2_3_1_,
+        rolesmodel1_.created_time as created_3_3_1_,
+        rolesmodel1_.disabled as disabled4_3_1_,
+        rolesmodel1_.modified_by as modified5_3_1_,
+        rolesmodel1_.modified_time as modified6_3_1_,
+        rolesmodel1_.version as version7_3_1_,
+        rolesmodel1_.role_name as role_nam8_3_1_,
+        menusmodel2_.created_by as created_2_2_2_,
+        menusmodel2_.created_time as created_3_2_2_,
+        menusmodel2_.disabled as disabled4_2_2_,
+        menusmodel2_.modified_by as modified5_2_2_,
+        menusmodel2_.modified_time as modified6_2_2_,
+        menusmodel2_.version as version7_2_2_,
+        menusmodel2_.menus_name as menus_na8_2_2_,
+        menusmodel2_.url as url9_2_2_ 
+    from
+        sys_authorization authorizat0_ 
+    inner join
+        sys_roles rolesmodel1_ 
+            on authorizat0_.sys_roles_id=rolesmodel1_.id 
+    inner join
+        sys_menu menusmodel2_ 
+            on authorizat0_.sys_menu_id=menusmodel2_.id 
+    where
+        rolesmodel1_.id=? 
+        and (
+            menusmodel2_.menus_name is not null
+        ) limit ?
+Hibernate: 
+    select
+        count(authorizat0_.id) as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.sys_roles_id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        usermodel0_.id as id1_4_,
+        usermodel0_.created_by as created_2_4_,
+        usermodel0_.created_time as created_3_4_,
+        usermodel0_.disabled as disabled4_4_,
+        usermodel0_.modified_by as modified5_4_,
+        usermodel0_.modified_time as modified6_4_,
+        usermodel0_.version as version7_4_,
+        usermodel0_.email as email8_4_,
+        usermodel0_.is_active as is_activ9_4_,
+        usermodel0_.name as name10_4_,
+        usermodel0_.no_hp as no_hp11_4_,
+        usermodel0_.password as passwor12_4_,
+        usermodel0_.username as usernam13_4_ 
+    from
+        sys_user usermodel0_ 
+    order by
+        usermodel0_.username asc limit ?
+Hibernate: 
+    select
+        userrolesm0_.sys_user_id as sys_user9_5_0_,
+        userrolesm0_.id as id1_5_0_,
+        userrolesm0_.id as id1_5_1_,
+        userrolesm0_.created_by as created_2_5_1_,
+        userrolesm0_.created_time as created_3_5_1_,
+        userrolesm0_.disabled as disabled4_5_1_,
+        userrolesm0_.modified_by as modified5_5_1_,
+        userrolesm0_.modified_time as modified6_5_1_,
+        userrolesm0_.version as version7_5_1_,
+        userrolesm0_.sys_roles_id as sys_role8_5_1_,
+        rolesmodel1_.id as id1_3_2_,
+        rolesmodel1_.created_by as created_2_3_2_,
+        rolesmodel1_.created_time as created_3_3_2_,
+        rolesmodel1_.disabled as disabled4_3_2_,
+        rolesmodel1_.modified_by as modified5_3_2_,
+        rolesmodel1_.modified_time as modified6_3_2_,
+        rolesmodel1_.version as version7_3_2_,
+        rolesmodel1_.role_name as role_nam8_3_2_ 
+    from
+        sys_user_roles userrolesm0_ 
+    inner join
+        sys_roles rolesmodel1_ 
+            on userrolesm0_.sys_roles_id=rolesmodel1_.id 
+    where
+        userrolesm0_.sys_user_id=?
+Hibernate: 
+    select
+        count(*) as col_0_0_ 
+    from
+        sys_user usermodel0_
+Hibernate: 
+    select
+        userrolesm0_.sys_user_id as sys_user9_5_0_,
+        userrolesm0_.id as id1_5_0_,
+        userrolesm0_.id as id1_5_1_,
+        userrolesm0_.created_by as created_2_5_1_,
+        userrolesm0_.created_time as created_3_5_1_,
+        userrolesm0_.disabled as disabled4_5_1_,
+        userrolesm0_.modified_by as modified5_5_1_,
+        userrolesm0_.modified_time as modified6_5_1_,
+        userrolesm0_.version as version7_5_1_,
+        userrolesm0_.sys_roles_id as sys_role8_5_1_,
+        rolesmodel1_.id as id1_3_2_,
+        rolesmodel1_.created_by as created_2_3_2_,
+        rolesmodel1_.created_time as created_3_3_2_,
+        rolesmodel1_.disabled as disabled4_3_2_,
+        rolesmodel1_.modified_by as modified5_3_2_,
+        rolesmodel1_.modified_time as modified6_3_2_,
+        rolesmodel1_.version as version7_3_2_,
+        rolesmodel1_.role_name as role_nam8_3_2_ 
+    from
+        sys_user_roles userrolesm0_ 
+    inner join
+        sys_roles rolesmodel1_ 
+            on userrolesm0_.sys_roles_id=rolesmodel1_.id 
+    where
+        userrolesm0_.sys_user_id=?
+Hibernate: 
+    select
+        userrolesm0_.sys_user_id as sys_user9_5_0_,
+        userrolesm0_.id as id1_5_0_,
+        userrolesm0_.id as id1_5_1_,
+        userrolesm0_.created_by as created_2_5_1_,
+        userrolesm0_.created_time as created_3_5_1_,
+        userrolesm0_.disabled as disabled4_5_1_,
+        userrolesm0_.modified_by as modified5_5_1_,
+        userrolesm0_.modified_time as modified6_5_1_,
+        userrolesm0_.version as version7_5_1_,
+        userrolesm0_.sys_roles_id as sys_role8_5_1_,
+        rolesmodel1_.id as id1_3_2_,
+        rolesmodel1_.created_by as created_2_3_2_,
+        rolesmodel1_.created_time as created_3_3_2_,
+        rolesmodel1_.disabled as disabled4_3_2_,
+        rolesmodel1_.modified_by as modified5_3_2_,
+        rolesmodel1_.modified_time as modified6_3_2_,
+        rolesmodel1_.version as version7_3_2_,
+        rolesmodel1_.role_name as role_nam8_3_2_ 
+    from
+        sys_user_roles userrolesm0_ 
+    inner join
+        sys_roles rolesmodel1_ 
+            on userrolesm0_.sys_roles_id=rolesmodel1_.id 
+    where
+        userrolesm0_.sys_user_id=?
+Hibernate: 
+    select
+        nextval ('hibernate_sequence')
+Hibernate: 
+    select
+        nextval ('hibernate_sequence')
+Hibernate: 
+    insert 
+    into
+        sys_user
+        (created_by, created_time, disabled, modified_by, version, email, is_active, name, no_hp, password, username, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        sys_user_roles
+        (created_by, created_time, disabled, modified_by, version, sys_roles_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    update
+        sys_user_roles 
+    set
+        sys_user_id=? 
+    where
+        id=?
+Hibernate: 
+    select
+        usermodel0_.id as id1_4_,
+        usermodel0_.created_by as created_2_4_,
+        usermodel0_.created_time as created_3_4_,
+        usermodel0_.disabled as disabled4_4_,
+        usermodel0_.modified_by as modified5_4_,
+        usermodel0_.modified_time as modified6_4_,
+        usermodel0_.version as version7_4_,
+        usermodel0_.email as email8_4_,
+        usermodel0_.is_active as is_activ9_4_,
+        usermodel0_.name as name10_4_,
+        usermodel0_.no_hp as no_hp11_4_,
+        usermodel0_.password as passwor12_4_,
+        usermodel0_.username as usernam13_4_ 
+    from
+        sys_user usermodel0_ 
+    order by
+        usermodel0_.username asc limit ?
+Hibernate: 
+    select
+        count(*) as col_0_0_ 
+    from
+        sys_user usermodel0_
+Hibernate: 
+    select
+        userrolesm0_.sys_user_id as sys_user9_5_0_,
+        userrolesm0_.id as id1_5_0_,
+        userrolesm0_.id as id1_5_1_,
+        userrolesm0_.created_by as created_2_5_1_,
+        userrolesm0_.created_time as created_3_5_1_,
+        userrolesm0_.disabled as disabled4_5_1_,
+        userrolesm0_.modified_by as modified5_5_1_,
+        userrolesm0_.modified_time as modified6_5_1_,
+        userrolesm0_.version as version7_5_1_,
+        userrolesm0_.sys_roles_id as sys_role8_5_1_,
+        rolesmodel1_.id as id1_3_2_,
+        rolesmodel1_.created_by as created_2_3_2_,
+        rolesmodel1_.created_time as created_3_3_2_,
+        rolesmodel1_.disabled as disabled4_3_2_,
+        rolesmodel1_.modified_by as modified5_3_2_,
+        rolesmodel1_.modified_time as modified6_3_2_,
+        rolesmodel1_.version as version7_3_2_,
+        rolesmodel1_.role_name as role_nam8_3_2_ 
+    from
+        sys_user_roles userrolesm0_ 
+    inner join
+        sys_roles rolesmodel1_ 
+            on userrolesm0_.sys_roles_id=rolesmodel1_.id 
+    where
+        userrolesm0_.sys_user_id=?
+Hibernate: 
+    select
+        userrolesm0_.sys_user_id as sys_user9_5_0_,
+        userrolesm0_.id as id1_5_0_,
+        userrolesm0_.id as id1_5_1_,
+        userrolesm0_.created_by as created_2_5_1_,
+        userrolesm0_.created_time as created_3_5_1_,
+        userrolesm0_.disabled as disabled4_5_1_,
+        userrolesm0_.modified_by as modified5_5_1_,
+        userrolesm0_.modified_time as modified6_5_1_,
+        userrolesm0_.version as version7_5_1_,
+        userrolesm0_.sys_roles_id as sys_role8_5_1_,
+        rolesmodel1_.id as id1_3_2_,
+        rolesmodel1_.created_by as created_2_3_2_,
+        rolesmodel1_.created_time as created_3_3_2_,
+        rolesmodel1_.disabled as disabled4_3_2_,
+        rolesmodel1_.modified_by as modified5_3_2_,
+        rolesmodel1_.modified_time as modified6_3_2_,
+        rolesmodel1_.version as version7_3_2_,
+        rolesmodel1_.role_name as role_nam8_3_2_ 
+    from
+        sys_user_roles userrolesm0_ 
+    inner join
+        sys_roles rolesmodel1_ 
+            on userrolesm0_.sys_roles_id=rolesmodel1_.id 
+    where
+        userrolesm0_.sys_user_id=?
+Hibernate: 
+    select
+        userrolesm0_.sys_user_id as sys_user9_5_0_,
+        userrolesm0_.id as id1_5_0_,
+        userrolesm0_.id as id1_5_1_,
+        userrolesm0_.created_by as created_2_5_1_,
+        userrolesm0_.created_time as created_3_5_1_,
+        userrolesm0_.disabled as disabled4_5_1_,
+        userrolesm0_.modified_by as modified5_5_1_,
+        userrolesm0_.modified_time as modified6_5_1_,
+        userrolesm0_.version as version7_5_1_,
+        userrolesm0_.sys_roles_id as sys_role8_5_1_,
+        rolesmodel1_.id as id1_3_2_,
+        rolesmodel1_.created_by as created_2_3_2_,
+        rolesmodel1_.created_time as created_3_3_2_,
+        rolesmodel1_.disabled as disabled4_3_2_,
+        rolesmodel1_.modified_by as modified5_3_2_,
+        rolesmodel1_.modified_time as modified6_3_2_,
+        rolesmodel1_.version as version7_3_2_,
+        rolesmodel1_.role_name as role_nam8_3_2_ 
+    from
+        sys_user_roles userrolesm0_ 
+    inner join
+        sys_roles rolesmodel1_ 
+            on userrolesm0_.sys_roles_id=rolesmodel1_.id 
+    where
+        userrolesm0_.sys_user_id=?
+Hibernate: 
+    select
+        userrolesm0_.sys_user_id as sys_user9_5_0_,
+        userrolesm0_.id as id1_5_0_,
+        userrolesm0_.id as id1_5_1_,
+        userrolesm0_.created_by as created_2_5_1_,
+        userrolesm0_.created_time as created_3_5_1_,
+        userrolesm0_.disabled as disabled4_5_1_,
+        userrolesm0_.modified_by as modified5_5_1_,
+        userrolesm0_.modified_time as modified6_5_1_,
+        userrolesm0_.version as version7_5_1_,
+        userrolesm0_.sys_roles_id as sys_role8_5_1_,
+        rolesmodel1_.id as id1_3_2_,
+        rolesmodel1_.created_by as created_2_3_2_,
+        rolesmodel1_.created_time as created_3_3_2_,
+        rolesmodel1_.disabled as disabled4_3_2_,
+        rolesmodel1_.modified_by as modified5_3_2_,
+        rolesmodel1_.modified_time as modified6_3_2_,
+        rolesmodel1_.version as version7_3_2_,
+        rolesmodel1_.role_name as role_nam8_3_2_ 
+    from
+        sys_user_roles userrolesm0_ 
+    inner join
+        sys_roles rolesmodel1_ 
+            on userrolesm0_.sys_roles_id=rolesmodel1_.id 
+    where
+        userrolesm0_.sys_user_id=?
+Hibernate: 
+    select
+        authorizat0_.id as id1_1_0_,
+        rolesmodel1_.id as id1_3_1_,
+        menusmodel2_.id as id1_2_2_,
+        authorizat0_.created_by as created_2_1_0_,
+        authorizat0_.created_time as created_3_1_0_,
+        authorizat0_.disabled as disabled4_1_0_,
+        authorizat0_.modified_by as modified5_1_0_,
+        authorizat0_.modified_time as modified6_1_0_,
+        authorizat0_.version as version7_1_0_,
+        authorizat0_.is_delete as is_delet8_1_0_,
+        authorizat0_.is_insert as is_inser9_1_0_,
+        authorizat0_.is_read as is_read10_1_0_,
+        authorizat0_.is_update as is_upda11_1_0_,
+        authorizat0_.parent_id as parent_12_1_0_,
+        authorizat0_.sys_menu_id as sys_men13_1_0_,
+        authorizat0_.sys_roles_id as sys_rol14_1_0_,
+        rolesmodel1_.created_by as created_2_3_1_,
+        rolesmodel1_.created_time as created_3_3_1_,
+        rolesmodel1_.disabled as disabled4_3_1_,
+        rolesmodel1_.modified_by as modified5_3_1_,
+        rolesmodel1_.modified_time as modified6_3_1_,
+        rolesmodel1_.version as version7_3_1_,
+        rolesmodel1_.role_name as role_nam8_3_1_,
+        menusmodel2_.created_by as created_2_2_2_,
+        menusmodel2_.created_time as created_3_2_2_,
+        menusmodel2_.disabled as disabled4_2_2_,
+        menusmodel2_.modified_by as modified5_2_2_,
+        menusmodel2_.modified_time as modified6_2_2_,
+        menusmodel2_.version as version7_2_2_,
+        menusmodel2_.menus_name as menus_na8_2_2_,
+        menusmodel2_.url as url9_2_2_ 
+    from
+        sys_authorization authorizat0_ 
+    inner join
+        sys_roles rolesmodel1_ 
+            on authorizat0_.sys_roles_id=rolesmodel1_.id 
+    inner join
+        sys_menu menusmodel2_ 
+            on authorizat0_.sys_menu_id=menusmodel2_.id 
+    where
+        rolesmodel1_.id=? 
+        and (
+            menusmodel2_.menus_name is not null
+        ) limit ?
+Hibernate: 
+    select
+        count(authorizat0_.id) as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.sys_roles_id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        rolesmodel0_.id as id1_3_,
+        rolesmodel0_.created_by as created_2_3_,
+        rolesmodel0_.created_time as created_3_3_,
+        rolesmodel0_.disabled as disabled4_3_,
+        rolesmodel0_.modified_by as modified5_3_,
+        rolesmodel0_.modified_time as modified6_3_,
+        rolesmodel0_.version as version7_3_,
+        rolesmodel0_.role_name as role_nam8_3_ 
+    from
+        sys_roles rolesmodel0_ 
+    order by
+        rolesmodel0_.role_name asc limit ?
+Hibernate: 
+    select
+        count(*) as col_0_0_ 
+    from
+        sys_roles rolesmodel0_
+Hibernate: 
+    select
+        authorizat0_.id as id1_1_0_,
+        rolesmodel1_.id as id1_3_1_,
+        menusmodel2_.id as id1_2_2_,
+        authorizat0_.created_by as created_2_1_0_,
+        authorizat0_.created_time as created_3_1_0_,
+        authorizat0_.disabled as disabled4_1_0_,
+        authorizat0_.modified_by as modified5_1_0_,
+        authorizat0_.modified_time as modified6_1_0_,
+        authorizat0_.version as version7_1_0_,
+        authorizat0_.is_delete as is_delet8_1_0_,
+        authorizat0_.is_insert as is_inser9_1_0_,
+        authorizat0_.is_read as is_read10_1_0_,
+        authorizat0_.is_update as is_upda11_1_0_,
+        authorizat0_.parent_id as parent_12_1_0_,
+        authorizat0_.sys_menu_id as sys_men13_1_0_,
+        authorizat0_.sys_roles_id as sys_rol14_1_0_,
+        rolesmodel1_.created_by as created_2_3_1_,
+        rolesmodel1_.created_time as created_3_3_1_,
+        rolesmodel1_.disabled as disabled4_3_1_,
+        rolesmodel1_.modified_by as modified5_3_1_,
+        rolesmodel1_.modified_time as modified6_3_1_,
+        rolesmodel1_.version as version7_3_1_,
+        rolesmodel1_.role_name as role_nam8_3_1_,
+        menusmodel2_.created_by as created_2_2_2_,
+        menusmodel2_.created_time as created_3_2_2_,
+        menusmodel2_.disabled as disabled4_2_2_,
+        menusmodel2_.modified_by as modified5_2_2_,
+        menusmodel2_.modified_time as modified6_2_2_,
+        menusmodel2_.version as version7_2_2_,
+        menusmodel2_.menus_name as menus_na8_2_2_,
+        menusmodel2_.url as url9_2_2_ 
+    from
+        sys_authorization authorizat0_ 
+    inner join
+        sys_roles rolesmodel1_ 
+            on authorizat0_.sys_roles_id=rolesmodel1_.id 
+    inner join
+        sys_menu menusmodel2_ 
+            on authorizat0_.sys_menu_id=menusmodel2_.id 
+    where
+        rolesmodel1_.id=? 
+        and (
+            menusmodel2_.menus_name is not null
+        ) limit ?
+Hibernate: 
+    select
+        count(authorizat0_.id) as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.sys_roles_id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        usermodel0_.id as id1_4_,
+        usermodel0_.created_by as created_2_4_,
+        usermodel0_.created_time as created_3_4_,
+        usermodel0_.disabled as disabled4_4_,
+        usermodel0_.modified_by as modified5_4_,
+        usermodel0_.modified_time as modified6_4_,
+        usermodel0_.version as version7_4_,
+        usermodel0_.email as email8_4_,
+        usermodel0_.is_active as is_activ9_4_,
+        usermodel0_.name as name10_4_,
+        usermodel0_.no_hp as no_hp11_4_,
+        usermodel0_.password as passwor12_4_,
+        usermodel0_.username as usernam13_4_ 
+    from
+        sys_user usermodel0_ 
+    order by
+        usermodel0_.username asc limit ?
+Hibernate: 
+    select
+        userrolesm0_.sys_user_id as sys_user9_5_0_,
+        userrolesm0_.id as id1_5_0_,
+        userrolesm0_.id as id1_5_1_,
+        userrolesm0_.created_by as created_2_5_1_,
+        userrolesm0_.created_time as created_3_5_1_,
+        userrolesm0_.disabled as disabled4_5_1_,
+        userrolesm0_.modified_by as modified5_5_1_,
+        userrolesm0_.modified_time as modified6_5_1_,
+        userrolesm0_.version as version7_5_1_,
+        userrolesm0_.sys_roles_id as sys_role8_5_1_,
+        rolesmodel1_.id as id1_3_2_,
+        rolesmodel1_.created_by as created_2_3_2_,
+        rolesmodel1_.created_time as created_3_3_2_,
+        rolesmodel1_.disabled as disabled4_3_2_,
+        rolesmodel1_.modified_by as modified5_3_2_,
+        rolesmodel1_.modified_time as modified6_3_2_,
+        rolesmodel1_.version as version7_3_2_,
+        rolesmodel1_.role_name as role_nam8_3_2_ 
+    from
+        sys_user_roles userrolesm0_ 
+    inner join
+        sys_roles rolesmodel1_ 
+            on userrolesm0_.sys_roles_id=rolesmodel1_.id 
+    where
+        userrolesm0_.sys_user_id=?
+Hibernate: 
+    select
+        userrolesm0_.sys_user_id as sys_user9_5_0_,
+        userrolesm0_.id as id1_5_0_,
+        userrolesm0_.id as id1_5_1_,
+        userrolesm0_.created_by as created_2_5_1_,
+        userrolesm0_.created_time as created_3_5_1_,
+        userrolesm0_.disabled as disabled4_5_1_,
+        userrolesm0_.modified_by as modified5_5_1_,
+        userrolesm0_.modified_time as modified6_5_1_,
+        userrolesm0_.version as version7_5_1_,
+        userrolesm0_.sys_roles_id as sys_role8_5_1_,
+        rolesmodel1_.id as id1_3_2_,
+        rolesmodel1_.created_by as created_2_3_2_,
+        rolesmodel1_.created_time as created_3_3_2_,
+        rolesmodel1_.disabled as disabled4_3_2_,
+        rolesmodel1_.modified_by as modified5_3_2_,
+        rolesmodel1_.modified_time as modified6_3_2_,
+        rolesmodel1_.version as version7_3_2_,
+        rolesmodel1_.role_name as role_nam8_3_2_ 
+    from
+        sys_user_roles userrolesm0_ 
+    inner join
+        sys_roles rolesmodel1_ 
+            on userrolesm0_.sys_roles_id=rolesmodel1_.id 
+    where
+        userrolesm0_.sys_user_id=?
+Hibernate: 
+    select
+        count(*) as col_0_0_ 
+    from
+        sys_user usermodel0_
+Hibernate: 
+    select
+        userrolesm0_.sys_user_id as sys_user9_5_0_,
+        userrolesm0_.id as id1_5_0_,
+        userrolesm0_.id as id1_5_1_,
+        userrolesm0_.created_by as created_2_5_1_,
+        userrolesm0_.created_time as created_3_5_1_,
+        userrolesm0_.disabled as disabled4_5_1_,
+        userrolesm0_.modified_by as modified5_5_1_,
+        userrolesm0_.modified_time as modified6_5_1_,
+        userrolesm0_.version as version7_5_1_,
+        userrolesm0_.sys_roles_id as sys_role8_5_1_,
+        rolesmodel1_.id as id1_3_2_,
+        rolesmodel1_.created_by as created_2_3_2_,
+        rolesmodel1_.created_time as created_3_3_2_,
+        rolesmodel1_.disabled as disabled4_3_2_,
+        rolesmodel1_.modified_by as modified5_3_2_,
+        rolesmodel1_.modified_time as modified6_3_2_,
+        rolesmodel1_.version as version7_3_2_,
+        rolesmodel1_.role_name as role_nam8_3_2_ 
+    from
+        sys_user_roles userrolesm0_ 
+    inner join
+        sys_roles rolesmodel1_ 
+            on userrolesm0_.sys_roles_id=rolesmodel1_.id 
+    where
+        userrolesm0_.sys_user_id=?
+Hibernate: 
+    select
+        userrolesm0_.sys_user_id as sys_user9_5_0_,
+        userrolesm0_.id as id1_5_0_,
+        userrolesm0_.id as id1_5_1_,
+        userrolesm0_.created_by as created_2_5_1_,
+        userrolesm0_.created_time as created_3_5_1_,
+        userrolesm0_.disabled as disabled4_5_1_,
+        userrolesm0_.modified_by as modified5_5_1_,
+        userrolesm0_.modified_time as modified6_5_1_,
+        userrolesm0_.version as version7_5_1_,
+        userrolesm0_.sys_roles_id as sys_role8_5_1_,
+        rolesmodel1_.id as id1_3_2_,
+        rolesmodel1_.created_by as created_2_3_2_,
+        rolesmodel1_.created_time as created_3_3_2_,
+        rolesmodel1_.disabled as disabled4_3_2_,
+        rolesmodel1_.modified_by as modified5_3_2_,
+        rolesmodel1_.modified_time as modified6_3_2_,
+        rolesmodel1_.version as version7_3_2_,
+        rolesmodel1_.role_name as role_nam8_3_2_ 
+    from
+        sys_user_roles userrolesm0_ 
+    inner join
+        sys_roles rolesmodel1_ 
+            on userrolesm0_.sys_roles_id=rolesmodel1_.id 
+    where
+        userrolesm0_.sys_user_id=?
+Hibernate: 
+    select
+        rolesmodel0_.id as id1_3_,
+        rolesmodel0_.created_by as created_2_3_,
+        rolesmodel0_.created_time as created_3_3_,
+        rolesmodel0_.disabled as disabled4_3_,
+        rolesmodel0_.modified_by as modified5_3_,
+        rolesmodel0_.modified_time as modified6_3_,
+        rolesmodel0_.version as version7_3_,
+        rolesmodel0_.role_name as role_nam8_3_ 
+    from
+        sys_roles rolesmodel0_ 
+    order by
+        rolesmodel0_.role_name asc limit ?
+Hibernate: 
+    select
+        count(*) as col_0_0_ 
+    from
+        sys_roles rolesmodel0_
+Hibernate: 
+    select
+        menusmodel0_.id as id1_2_,
+        menusmodel0_.created_by as created_2_2_,
+        menusmodel0_.created_time as created_3_2_,
+        menusmodel0_.disabled as disabled4_2_,
+        menusmodel0_.modified_by as modified5_2_,
+        menusmodel0_.modified_time as modified6_2_,
+        menusmodel0_.version as version7_2_,
+        menusmodel0_.menus_name as menus_na8_2_,
+        menusmodel0_.url as url9_2_ 
+    from
+        sys_menu menusmodel0_ 
+    where
+        menusmodel0_.menus_name like ? 
+    order by
+        menusmodel0_.menus_name asc limit ?
+Hibernate: 
+    select
+        count(*) as col_0_0_ 
+    from
+        sys_menu menusmodel0_
+Hibernate: 
+    select
+        menusmodel0_.id as id1_2_,
+        menusmodel0_.created_by as created_2_2_,
+        menusmodel0_.created_time as created_3_2_,
+        menusmodel0_.disabled as disabled4_2_,
+        menusmodel0_.modified_by as modified5_2_,
+        menusmodel0_.modified_time as modified6_2_,
+        menusmodel0_.version as version7_2_,
+        menusmodel0_.menus_name as menus_na8_2_,
+        menusmodel0_.url as url9_2_ 
+    from
+        sys_menu menusmodel0_ 
+    where
+        menusmodel0_.menus_name like ? 
+    order by
+        menusmodel0_.menus_name asc limit ?
+Hibernate: 
+    select
+        count(*) as col_0_0_ 
+    from
+        sys_menu menusmodel0_
+Hibernate: 
+    select
+        menusmodel0_.id as id1_2_,
+        menusmodel0_.created_by as created_2_2_,
+        menusmodel0_.created_time as created_3_2_,
+        menusmodel0_.disabled as disabled4_2_,
+        menusmodel0_.modified_by as modified5_2_,
+        menusmodel0_.modified_time as modified6_2_,
+        menusmodel0_.version as version7_2_,
+        menusmodel0_.menus_name as menus_na8_2_,
+        menusmodel0_.url as url9_2_ 
+    from
+        sys_menu menusmodel0_ 
+    where
+        menusmodel0_.menus_name like ? 
+    order by
+        menusmodel0_.menus_name asc limit ?
+Hibernate: 
+    select
+        count(*) as col_0_0_ 
+    from
+        sys_menu menusmodel0_
+Hibernate: 
+    select
+        authorizat0_.id as id1_1_0_,
+        rolesmodel1_.id as id1_3_1_,
+        menusmodel2_.id as id1_2_2_,
+        authorizat0_.created_by as created_2_1_0_,
+        authorizat0_.created_time as created_3_1_0_,
+        authorizat0_.disabled as disabled4_1_0_,
+        authorizat0_.modified_by as modified5_1_0_,
+        authorizat0_.modified_time as modified6_1_0_,
+        authorizat0_.version as version7_1_0_,
+        authorizat0_.is_delete as is_delet8_1_0_,
+        authorizat0_.is_insert as is_inser9_1_0_,
+        authorizat0_.is_read as is_read10_1_0_,
+        authorizat0_.is_update as is_upda11_1_0_,
+        authorizat0_.parent_id as parent_12_1_0_,
+        authorizat0_.sys_menu_id as sys_men13_1_0_,
+        authorizat0_.sys_roles_id as sys_rol14_1_0_,
+        rolesmodel1_.created_by as created_2_3_1_,
+        rolesmodel1_.created_time as created_3_3_1_,
+        rolesmodel1_.disabled as disabled4_3_1_,
+        rolesmodel1_.modified_by as modified5_3_1_,
+        rolesmodel1_.modified_time as modified6_3_1_,
+        rolesmodel1_.version as version7_3_1_,
+        rolesmodel1_.role_name as role_nam8_3_1_,
+        menusmodel2_.created_by as created_2_2_2_,
+        menusmodel2_.created_time as created_3_2_2_,
+        menusmodel2_.disabled as disabled4_2_2_,
+        menusmodel2_.modified_by as modified5_2_2_,
+        menusmodel2_.modified_time as modified6_2_2_,
+        menusmodel2_.version as version7_2_2_,
+        menusmodel2_.menus_name as menus_na8_2_2_,
+        menusmodel2_.url as url9_2_2_ 
+    from
+        sys_authorization authorizat0_ 
+    inner join
+        sys_roles rolesmodel1_ 
+            on authorizat0_.sys_roles_id=rolesmodel1_.id 
+    inner join
+        sys_menu menusmodel2_ 
+            on authorizat0_.sys_menu_id=menusmodel2_.id 
+    where
+        rolesmodel1_.id=? 
+        and (
+            menusmodel2_.menus_name is not null
+        ) limit ?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        count(authorizat0_.id) as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.sys_roles_id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        usermodel0_.id as id1_4_,
+        usermodel0_.created_by as created_2_4_,
+        usermodel0_.created_time as created_3_4_,
+        usermodel0_.disabled as disabled4_4_,
+        usermodel0_.modified_by as modified5_4_,
+        usermodel0_.modified_time as modified6_4_,
+        usermodel0_.version as version7_4_,
+        usermodel0_.email as email8_4_,
+        usermodel0_.is_active as is_activ9_4_,
+        usermodel0_.name as name10_4_,
+        usermodel0_.no_hp as no_hp11_4_,
+        usermodel0_.password as passwor12_4_,
+        usermodel0_.username as usernam13_4_ 
+    from
+        sys_user usermodel0_ 
+    order by
+        usermodel0_.username asc limit ?
+Hibernate: 
+    select
+        count(*) as col_0_0_ 
+    from
+        sys_user usermodel0_
+Hibernate: 
+    select
+        userrolesm0_.sys_user_id as sys_user9_5_0_,
+        userrolesm0_.id as id1_5_0_,
+        userrolesm0_.id as id1_5_1_,
+        userrolesm0_.created_by as created_2_5_1_,
+        userrolesm0_.created_time as created_3_5_1_,
+        userrolesm0_.disabled as disabled4_5_1_,
+        userrolesm0_.modified_by as modified5_5_1_,
+        userrolesm0_.modified_time as modified6_5_1_,
+        userrolesm0_.version as version7_5_1_,
+        userrolesm0_.sys_roles_id as sys_role8_5_1_,
+        rolesmodel1_.id as id1_3_2_,
+        rolesmodel1_.created_by as created_2_3_2_,
+        rolesmodel1_.created_time as created_3_3_2_,
+        rolesmodel1_.disabled as disabled4_3_2_,
+        rolesmodel1_.modified_by as modified5_3_2_,
+        rolesmodel1_.modified_time as modified6_3_2_,
+        rolesmodel1_.version as version7_3_2_,
+        rolesmodel1_.role_name as role_nam8_3_2_ 
+    from
+        sys_user_roles userrolesm0_ 
+    inner join
+        sys_roles rolesmodel1_ 
+            on userrolesm0_.sys_roles_id=rolesmodel1_.id 
+    where
+        userrolesm0_.sys_user_id=?
+Hibernate: 
+    select
+        userrolesm0_.sys_user_id as sys_user9_5_0_,
+        userrolesm0_.id as id1_5_0_,
+        userrolesm0_.id as id1_5_1_,
+        userrolesm0_.created_by as created_2_5_1_,
+        userrolesm0_.created_time as created_3_5_1_,
+        userrolesm0_.disabled as disabled4_5_1_,
+        userrolesm0_.modified_by as modified5_5_1_,
+        userrolesm0_.modified_time as modified6_5_1_,
+        userrolesm0_.version as version7_5_1_,
+        userrolesm0_.sys_roles_id as sys_role8_5_1_,
+        rolesmodel1_.id as id1_3_2_,
+        rolesmodel1_.created_by as created_2_3_2_,
+        rolesmodel1_.created_time as created_3_3_2_,
+        rolesmodel1_.disabled as disabled4_3_2_,
+        rolesmodel1_.modified_by as modified5_3_2_,
+        rolesmodel1_.modified_time as modified6_3_2_,
+        rolesmodel1_.version as version7_3_2_,
+        rolesmodel1_.role_name as role_nam8_3_2_ 
+    from
+        sys_user_roles userrolesm0_ 
+    inner join
+        sys_roles rolesmodel1_ 
+            on userrolesm0_.sys_roles_id=rolesmodel1_.id 
+    where
+        userrolesm0_.sys_user_id=?
+Hibernate: 
+    select
+        userrolesm0_.sys_user_id as sys_user9_5_0_,
+        userrolesm0_.id as id1_5_0_,
+        userrolesm0_.id as id1_5_1_,
+        userrolesm0_.created_by as created_2_5_1_,
+        userrolesm0_.created_time as created_3_5_1_,
+        userrolesm0_.disabled as disabled4_5_1_,
+        userrolesm0_.modified_by as modified5_5_1_,
+        userrolesm0_.modified_time as modified6_5_1_,
+        userrolesm0_.version as version7_5_1_,
+        userrolesm0_.sys_roles_id as sys_role8_5_1_,
+        rolesmodel1_.id as id1_3_2_,
+        rolesmodel1_.created_by as created_2_3_2_,
+        rolesmodel1_.created_time as created_3_3_2_,
+        rolesmodel1_.disabled as disabled4_3_2_,
+        rolesmodel1_.modified_by as modified5_3_2_,
+        rolesmodel1_.modified_time as modified6_3_2_,
+        rolesmodel1_.version as version7_3_2_,
+        rolesmodel1_.role_name as role_nam8_3_2_ 
+    from
+        sys_user_roles userrolesm0_ 
+    inner join
+        sys_roles rolesmodel1_ 
+            on userrolesm0_.sys_roles_id=rolesmodel1_.id 
+    where
+        userrolesm0_.sys_user_id=?
+Hibernate: 
+    select
+        userrolesm0_.sys_user_id as sys_user9_5_0_,
+        userrolesm0_.id as id1_5_0_,
+        userrolesm0_.id as id1_5_1_,
+        userrolesm0_.created_by as created_2_5_1_,
+        userrolesm0_.created_time as created_3_5_1_,
+        userrolesm0_.disabled as disabled4_5_1_,
+        userrolesm0_.modified_by as modified5_5_1_,
+        userrolesm0_.modified_time as modified6_5_1_,
+        userrolesm0_.version as version7_5_1_,
+        userrolesm0_.sys_roles_id as sys_role8_5_1_,
+        rolesmodel1_.id as id1_3_2_,
+        rolesmodel1_.created_by as created_2_3_2_,
+        rolesmodel1_.created_time as created_3_3_2_,
+        rolesmodel1_.disabled as disabled4_3_2_,
+        rolesmodel1_.modified_by as modified5_3_2_,
+        rolesmodel1_.modified_time as modified6_3_2_,
+        rolesmodel1_.version as version7_3_2_,
+        rolesmodel1_.role_name as role_nam8_3_2_ 
+    from
+        sys_user_roles userrolesm0_ 
+    inner join
+        sys_roles rolesmodel1_ 
+            on userrolesm0_.sys_roles_id=rolesmodel1_.id 
+    where
+        userrolesm0_.sys_user_id=?
+Hibernate: 
+    select
+        count(authorizat0_.id) as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.sys_roles_id=?
+Hibernate: 
+    select
+        authorizat0_.id as id1_1_0_,
+        rolesmodel1_.id as id1_3_1_,
+        menusmodel2_.id as id1_2_2_,
+        authorizat0_.created_by as created_2_1_0_,
+        authorizat0_.created_time as created_3_1_0_,
+        authorizat0_.disabled as disabled4_1_0_,
+        authorizat0_.modified_by as modified5_1_0_,
+        authorizat0_.modified_time as modified6_1_0_,
+        authorizat0_.version as version7_1_0_,
+        authorizat0_.is_delete as is_delet8_1_0_,
+        authorizat0_.is_insert as is_inser9_1_0_,
+        authorizat0_.is_read as is_read10_1_0_,
+        authorizat0_.is_update as is_upda11_1_0_,
+        authorizat0_.parent_id as parent_12_1_0_,
+        authorizat0_.sys_menu_id as sys_men13_1_0_,
+        authorizat0_.sys_roles_id as sys_rol14_1_0_,
+        rolesmodel1_.created_by as created_2_3_1_,
+        rolesmodel1_.created_time as created_3_3_1_,
+        rolesmodel1_.disabled as disabled4_3_1_,
+        rolesmodel1_.modified_by as modified5_3_1_,
+        rolesmodel1_.modified_time as modified6_3_1_,
+        rolesmodel1_.version as version7_3_1_,
+        rolesmodel1_.role_name as role_nam8_3_1_,
+        menusmodel2_.created_by as created_2_2_2_,
+        menusmodel2_.created_time as created_3_2_2_,
+        menusmodel2_.disabled as disabled4_2_2_,
+        menusmodel2_.modified_by as modified5_2_2_,
+        menusmodel2_.modified_time as modified6_2_2_,
+        menusmodel2_.version as version7_2_2_,
+        menusmodel2_.menus_name as menus_na8_2_2_,
+        menusmodel2_.url as url9_2_2_ 
+    from
+        sys_authorization authorizat0_ 
+    inner join
+        sys_roles rolesmodel1_ 
+            on authorizat0_.sys_roles_id=rolesmodel1_.id 
+    inner join
+        sys_menu menusmodel2_ 
+            on authorizat0_.sys_menu_id=menusmodel2_.id 
+    where
+        rolesmodel1_.id=? 
+        and (
+            menusmodel2_.menus_name is not null
+        ) limit ?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        rolesmodel0_.id as id1_3_,
+        rolesmodel0_.created_by as created_2_3_,
+        rolesmodel0_.created_time as created_3_3_,
+        rolesmodel0_.disabled as disabled4_3_,
+        rolesmodel0_.modified_by as modified5_3_,
+        rolesmodel0_.modified_time as modified6_3_,
+        rolesmodel0_.version as version7_3_,
+        rolesmodel0_.role_name as role_nam8_3_ 
+    from
+        sys_roles rolesmodel0_ 
+    order by
+        rolesmodel0_.role_name asc limit ?
+Hibernate: 
+    select
+        count(*) as col_0_0_ 
+    from
+        sys_roles rolesmodel0_
+Hibernate: 
+    select
+        count(authorizat0_.id) as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.sys_roles_id=?
+Hibernate: 
+    select
+        authorizat0_.id as id1_1_0_,
+        rolesmodel1_.id as id1_3_1_,
+        menusmodel2_.id as id1_2_2_,
+        authorizat0_.created_by as created_2_1_0_,
+        authorizat0_.created_time as created_3_1_0_,
+        authorizat0_.disabled as disabled4_1_0_,
+        authorizat0_.modified_by as modified5_1_0_,
+        authorizat0_.modified_time as modified6_1_0_,
+        authorizat0_.version as version7_1_0_,
+        authorizat0_.is_delete as is_delet8_1_0_,
+        authorizat0_.is_insert as is_inser9_1_0_,
+        authorizat0_.is_read as is_read10_1_0_,
+        authorizat0_.is_update as is_upda11_1_0_,
+        authorizat0_.parent_id as parent_12_1_0_,
+        authorizat0_.sys_menu_id as sys_men13_1_0_,
+        authorizat0_.sys_roles_id as sys_rol14_1_0_,
+        rolesmodel1_.created_by as created_2_3_1_,
+        rolesmodel1_.created_time as created_3_3_1_,
+        rolesmodel1_.disabled as disabled4_3_1_,
+        rolesmodel1_.modified_by as modified5_3_1_,
+        rolesmodel1_.modified_time as modified6_3_1_,
+        rolesmodel1_.version as version7_3_1_,
+        rolesmodel1_.role_name as role_nam8_3_1_,
+        menusmodel2_.created_by as created_2_2_2_,
+        menusmodel2_.created_time as created_3_2_2_,
+        menusmodel2_.disabled as disabled4_2_2_,
+        menusmodel2_.modified_by as modified5_2_2_,
+        menusmodel2_.modified_time as modified6_2_2_,
+        menusmodel2_.version as version7_2_2_,
+        menusmodel2_.menus_name as menus_na8_2_2_,
+        menusmodel2_.url as url9_2_2_ 
+    from
+        sys_authorization authorizat0_ 
+    inner join
+        sys_roles rolesmodel1_ 
+            on authorizat0_.sys_roles_id=rolesmodel1_.id 
+    inner join
+        sys_menu menusmodel2_ 
+            on authorizat0_.sys_menu_id=menusmodel2_.id 
+    where
+        rolesmodel1_.id=? 
+        and (
+            menusmodel2_.menus_name is not null
+        ) limit ?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        usermodel0_.id as id1_4_,
+        usermodel0_.created_by as created_2_4_,
+        usermodel0_.created_time as created_3_4_,
+        usermodel0_.disabled as disabled4_4_,
+        usermodel0_.modified_by as modified5_4_,
+        usermodel0_.modified_time as modified6_4_,
+        usermodel0_.version as version7_4_,
+        usermodel0_.email as email8_4_,
+        usermodel0_.is_active as is_activ9_4_,
+        usermodel0_.name as name10_4_,
+        usermodel0_.no_hp as no_hp11_4_,
+        usermodel0_.password as passwor12_4_,
+        usermodel0_.username as usernam13_4_ 
+    from
+        sys_user usermodel0_ 
+    order by
+        usermodel0_.username asc limit ?
+Hibernate: 
+    select
+        count(*) as col_0_0_ 
+    from
+        sys_user usermodel0_
+Hibernate: 
+    select
+        userrolesm0_.sys_user_id as sys_user9_5_0_,
+        userrolesm0_.id as id1_5_0_,
+        userrolesm0_.id as id1_5_1_,
+        userrolesm0_.created_by as created_2_5_1_,
+        userrolesm0_.created_time as created_3_5_1_,
+        userrolesm0_.disabled as disabled4_5_1_,
+        userrolesm0_.modified_by as modified5_5_1_,
+        userrolesm0_.modified_time as modified6_5_1_,
+        userrolesm0_.version as version7_5_1_,
+        userrolesm0_.sys_roles_id as sys_role8_5_1_,
+        rolesmodel1_.id as id1_3_2_,
+        rolesmodel1_.created_by as created_2_3_2_,
+        rolesmodel1_.created_time as created_3_3_2_,
+        rolesmodel1_.disabled as disabled4_3_2_,
+        rolesmodel1_.modified_by as modified5_3_2_,
+        rolesmodel1_.modified_time as modified6_3_2_,
+        rolesmodel1_.version as version7_3_2_,
+        rolesmodel1_.role_name as role_nam8_3_2_ 
+    from
+        sys_user_roles userrolesm0_ 
+    inner join
+        sys_roles rolesmodel1_ 
+            on userrolesm0_.sys_roles_id=rolesmodel1_.id 
+    where
+        userrolesm0_.sys_user_id=?
+Hibernate: 
+    select
+        userrolesm0_.sys_user_id as sys_user9_5_0_,
+        userrolesm0_.id as id1_5_0_,
+        userrolesm0_.id as id1_5_1_,
+        userrolesm0_.created_by as created_2_5_1_,
+        userrolesm0_.created_time as created_3_5_1_,
+        userrolesm0_.disabled as disabled4_5_1_,
+        userrolesm0_.modified_by as modified5_5_1_,
+        userrolesm0_.modified_time as modified6_5_1_,
+        userrolesm0_.version as version7_5_1_,
+        userrolesm0_.sys_roles_id as sys_role8_5_1_,
+        rolesmodel1_.id as id1_3_2_,
+        rolesmodel1_.created_by as created_2_3_2_,
+        rolesmodel1_.created_time as created_3_3_2_,
+        rolesmodel1_.disabled as disabled4_3_2_,
+        rolesmodel1_.modified_by as modified5_3_2_,
+        rolesmodel1_.modified_time as modified6_3_2_,
+        rolesmodel1_.version as version7_3_2_,
+        rolesmodel1_.role_name as role_nam8_3_2_ 
+    from
+        sys_user_roles userrolesm0_ 
+    inner join
+        sys_roles rolesmodel1_ 
+            on userrolesm0_.sys_roles_id=rolesmodel1_.id 
+    where
+        userrolesm0_.sys_user_id=?
+Hibernate: 
+    select
+        userrolesm0_.sys_user_id as sys_user9_5_0_,
+        userrolesm0_.id as id1_5_0_,
+        userrolesm0_.id as id1_5_1_,
+        userrolesm0_.created_by as created_2_5_1_,
+        userrolesm0_.created_time as created_3_5_1_,
+        userrolesm0_.disabled as disabled4_5_1_,
+        userrolesm0_.modified_by as modified5_5_1_,
+        userrolesm0_.modified_time as modified6_5_1_,
+        userrolesm0_.version as version7_5_1_,
+        userrolesm0_.sys_roles_id as sys_role8_5_1_,
+        rolesmodel1_.id as id1_3_2_,
+        rolesmodel1_.created_by as created_2_3_2_,
+        rolesmodel1_.created_time as created_3_3_2_,
+        rolesmodel1_.disabled as disabled4_3_2_,
+        rolesmodel1_.modified_by as modified5_3_2_,
+        rolesmodel1_.modified_time as modified6_3_2_,
+        rolesmodel1_.version as version7_3_2_,
+        rolesmodel1_.role_name as role_nam8_3_2_ 
+    from
+        sys_user_roles userrolesm0_ 
+    inner join
+        sys_roles rolesmodel1_ 
+            on userrolesm0_.sys_roles_id=rolesmodel1_.id 
+    where
+        userrolesm0_.sys_user_id=?
+Hibernate: 
+    select
+        userrolesm0_.sys_user_id as sys_user9_5_0_,
+        userrolesm0_.id as id1_5_0_,
+        userrolesm0_.id as id1_5_1_,
+        userrolesm0_.created_by as created_2_5_1_,
+        userrolesm0_.created_time as created_3_5_1_,
+        userrolesm0_.disabled as disabled4_5_1_,
+        userrolesm0_.modified_by as modified5_5_1_,
+        userrolesm0_.modified_time as modified6_5_1_,
+        userrolesm0_.version as version7_5_1_,
+        userrolesm0_.sys_roles_id as sys_role8_5_1_,
+        rolesmodel1_.id as id1_3_2_,
+        rolesmodel1_.created_by as created_2_3_2_,
+        rolesmodel1_.created_time as created_3_3_2_,
+        rolesmodel1_.disabled as disabled4_3_2_,
+        rolesmodel1_.modified_by as modified5_3_2_,
+        rolesmodel1_.modified_time as modified6_3_2_,
+        rolesmodel1_.version as version7_3_2_,
+        rolesmodel1_.role_name as role_nam8_3_2_ 
+    from
+        sys_user_roles userrolesm0_ 
+    inner join
+        sys_roles rolesmodel1_ 
+            on userrolesm0_.sys_roles_id=rolesmodel1_.id 
+    where
+        userrolesm0_.sys_user_id=?
+Hibernate: 
+    select
+        authorizat0_.id as id1_1_0_,
+        rolesmodel1_.id as id1_3_1_,
+        menusmodel2_.id as id1_2_2_,
+        authorizat0_.created_by as created_2_1_0_,
+        authorizat0_.created_time as created_3_1_0_,
+        authorizat0_.disabled as disabled4_1_0_,
+        authorizat0_.modified_by as modified5_1_0_,
+        authorizat0_.modified_time as modified6_1_0_,
+        authorizat0_.version as version7_1_0_,
+        authorizat0_.is_delete as is_delet8_1_0_,
+        authorizat0_.is_insert as is_inser9_1_0_,
+        authorizat0_.is_read as is_read10_1_0_,
+        authorizat0_.is_update as is_upda11_1_0_,
+        authorizat0_.parent_id as parent_12_1_0_,
+        authorizat0_.sys_menu_id as sys_men13_1_0_,
+        authorizat0_.sys_roles_id as sys_rol14_1_0_,
+        rolesmodel1_.created_by as created_2_3_1_,
+        rolesmodel1_.created_time as created_3_3_1_,
+        rolesmodel1_.disabled as disabled4_3_1_,
+        rolesmodel1_.modified_by as modified5_3_1_,
+        rolesmodel1_.modified_time as modified6_3_1_,
+        rolesmodel1_.version as version7_3_1_,
+        rolesmodel1_.role_name as role_nam8_3_1_,
+        menusmodel2_.created_by as created_2_2_2_,
+        menusmodel2_.created_time as created_3_2_2_,
+        menusmodel2_.disabled as disabled4_2_2_,
+        menusmodel2_.modified_by as modified5_2_2_,
+        menusmodel2_.modified_time as modified6_2_2_,
+        menusmodel2_.version as version7_2_2_,
+        menusmodel2_.menus_name as menus_na8_2_2_,
+        menusmodel2_.url as url9_2_2_ 
+    from
+        sys_authorization authorizat0_ 
+    inner join
+        sys_roles rolesmodel1_ 
+            on authorizat0_.sys_roles_id=rolesmodel1_.id 
+    inner join
+        sys_menu menusmodel2_ 
+            on authorizat0_.sys_menu_id=menusmodel2_.id 
+    where
+        rolesmodel1_.id=? 
+        and (
+            menusmodel2_.menus_name is not null
+        ) limit ?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        count(authorizat0_.id) as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.sys_roles_id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        rolesmodel0_.id as id1_3_,
+        rolesmodel0_.created_by as created_2_3_,
+        rolesmodel0_.created_time as created_3_3_,
+        rolesmodel0_.disabled as disabled4_3_,
+        rolesmodel0_.modified_by as modified5_3_,
+        rolesmodel0_.modified_time as modified6_3_,
+        rolesmodel0_.version as version7_3_,
+        rolesmodel0_.role_name as role_nam8_3_ 
+    from
+        sys_roles rolesmodel0_ 
+    where
+        rolesmodel0_.role_name in (
+            ?
+        ) 
+    order by
+        rolesmodel0_.id desc
+Hibernate: 
+    select
+        a.id as id ,
+        sm.menus_name as name_menu,
+        sm.url as pattern_dispatcher_url,
+        coalesce(a.parent_id,
+        0) as parent_id,
+        coalesce(b.con,
+        0) as con  
+    from
+        sys_authorization as a 
+    LEFT join
+        (
+            select
+                parent_id,
+                count(1) as con 
+            from
+                sys_authorization 
+            GROUP by
+                parent_id 
+        ) as b  
+            on a.id = b.parent_id  
+    left join
+        sys_menu sm 
+            on a.sys_menu_id = sm.id 
+    where
+        sys_roles_id in (
+            ?
+        ) 
+        and coalesce(a.parent_id, 0) = ?
+Hibernate: 
+    select
+        a.id as id ,
+        sm.menus_name as name_menu,
+        sm.url as pattern_dispatcher_url,
+        coalesce(a.parent_id,
+        0) as parent_id,
+        coalesce(b.con,
+        0) as con  
+    from
+        sys_authorization as a 
+    LEFT join
+        (
+            select
+                parent_id,
+                count(1) as con 
+            from
+                sys_authorization 
+            GROUP by
+                parent_id 
+        ) as b  
+            on a.id = b.parent_id  
+    left join
+        sys_menu sm 
+            on a.sys_menu_id = sm.id 
+    where
+        sys_roles_id in (
+            ?
+        ) 
+        and coalesce(a.parent_id, 0) = ?
+Hibernate: 
+    select
+        a.id as id ,
+        sm.menus_name as name_menu,
+        sm.url as pattern_dispatcher_url,
+        coalesce(a.parent_id,
+        0) as parent_id,
+        coalesce(b.con,
+        0) as con  
+    from
+        sys_authorization as a 
+    LEFT join
+        (
+            select
+                parent_id,
+                count(1) as con 
+            from
+                sys_authorization 
+            GROUP by
+                parent_id 
+        ) as b  
+            on a.id = b.parent_id  
+    left join
+        sys_menu sm 
+            on a.sys_menu_id = sm.id 
+    where
+        sys_roles_id in (
+            ?
+        ) 
+        and coalesce(a.parent_id, 0) = ?
+Hibernate: 
+    select
+        a.id as id ,
+        sm.menus_name as name_menu,
+        sm.url as pattern_dispatcher_url,
+        coalesce(a.parent_id,
+        0) as parent_id,
+        coalesce(b.con,
+        0) as con  
+    from
+        sys_authorization as a 
+    LEFT join
+        (
+            select
+                parent_id,
+                count(1) as con 
+            from
+                sys_authorization 
+            GROUP by
+                parent_id 
+        ) as b  
+            on a.id = b.parent_id  
+    left join
+        sys_menu sm 
+            on a.sys_menu_id = sm.id 
+    where
+        sys_roles_id in (
+            ?
+        ) 
+        and coalesce(a.parent_id, 0) = ?
+Hibernate: 
+    select
+        a.id as id ,
+        sm.menus_name as name_menu,
+        sm.url as pattern_dispatcher_url,
+        coalesce(a.parent_id,
+        0) as parent_id,
+        coalesce(b.con,
+        0) as con  
+    from
+        sys_authorization as a 
+    LEFT join
+        (
+            select
+                parent_id,
+                count(1) as con 
+            from
+                sys_authorization 
+            GROUP by
+                parent_id 
+        ) as b  
+            on a.id = b.parent_id  
+    left join
+        sys_menu sm 
+            on a.sys_menu_id = sm.id 
+    where
+        sys_roles_id in (
+            ?
+        ) 
+        and coalesce(a.parent_id, 0) = ?
+Hibernate: 
+    select
+        usermodel0_.id as id1_4_,
+        usermodel0_.created_by as created_2_4_,
+        usermodel0_.created_time as created_3_4_,
+        usermodel0_.disabled as disabled4_4_,
+        usermodel0_.modified_by as modified5_4_,
+        usermodel0_.modified_time as modified6_4_,
+        usermodel0_.version as version7_4_,
+        usermodel0_.email as email8_4_,
+        usermodel0_.is_active as is_activ9_4_,
+        usermodel0_.name as name10_4_,
+        usermodel0_.no_hp as no_hp11_4_,
+        usermodel0_.password as passwor12_4_,
+        usermodel0_.username as usernam13_4_ 
+    from
+        sys_user usermodel0_ 
+    where
+        usermodel0_.username=?
+Hibernate: 
+    select
+        userrolesm0_.sys_user_id as sys_user9_5_0_,
+        userrolesm0_.id as id1_5_0_,
+        userrolesm0_.id as id1_5_1_,
+        userrolesm0_.created_by as created_2_5_1_,
+        userrolesm0_.created_time as created_3_5_1_,
+        userrolesm0_.disabled as disabled4_5_1_,
+        userrolesm0_.modified_by as modified5_5_1_,
+        userrolesm0_.modified_time as modified6_5_1_,
+        userrolesm0_.version as version7_5_1_,
+        userrolesm0_.sys_roles_id as sys_role8_5_1_,
+        rolesmodel1_.id as id1_3_2_,
+        rolesmodel1_.created_by as created_2_3_2_,
+        rolesmodel1_.created_time as created_3_3_2_,
+        rolesmodel1_.disabled as disabled4_3_2_,
+        rolesmodel1_.modified_by as modified5_3_2_,
+        rolesmodel1_.modified_time as modified6_3_2_,
+        rolesmodel1_.version as version7_3_2_,
+        rolesmodel1_.role_name as role_nam8_3_2_ 
+    from
+        sys_user_roles userrolesm0_ 
+    inner join
+        sys_roles rolesmodel1_ 
+            on userrolesm0_.sys_roles_id=rolesmodel1_.id 
+    where
+        userrolesm0_.sys_user_id=?
+Hibernate: 
+    select
+        rolesmodel0_.id as id1_3_,
+        rolesmodel0_.created_by as created_2_3_,
+        rolesmodel0_.created_time as created_3_3_,
+        rolesmodel0_.disabled as disabled4_3_,
+        rolesmodel0_.modified_by as modified5_3_,
+        rolesmodel0_.modified_time as modified6_3_,
+        rolesmodel0_.version as version7_3_,
+        rolesmodel0_.role_name as role_nam8_3_ 
+    from
+        sys_roles rolesmodel0_
+Hibernate: 
+    select
+        rolesmodel0_.id as id1_3_,
+        rolesmodel0_.created_by as created_2_3_,
+        rolesmodel0_.created_time as created_3_3_,
+        rolesmodel0_.disabled as disabled4_3_,
+        rolesmodel0_.modified_by as modified5_3_,
+        rolesmodel0_.modified_time as modified6_3_,
+        rolesmodel0_.version as version7_3_,
+        rolesmodel0_.role_name as role_nam8_3_ 
+    from
+        sys_roles rolesmodel0_ 
+    where
+        rolesmodel0_.role_name in (
+            ?
+        ) 
+    order by
+        rolesmodel0_.id desc
+Hibernate: 
+    select
+        a.id as id ,
+        sm.menus_name as name_menu,
+        sm.url as pattern_dispatcher_url,
+        coalesce(a.parent_id,
+        0) as parent_id,
+        coalesce(b.con,
+        0) as con  
+    from
+        sys_authorization as a 
+    LEFT join
+        (
+            select
+                parent_id,
+                count(1) as con 
+            from
+                sys_authorization 
+            GROUP by
+                parent_id 
+        ) as b  
+            on a.id = b.parent_id  
+    left join
+        sys_menu sm 
+            on a.sys_menu_id = sm.id 
+    where
+        sys_roles_id in (
+            ?
+        ) 
+        and coalesce(a.parent_id, 0) = ?
+Hibernate: 
+    select
+        a.id as id ,
+        sm.menus_name as name_menu,
+        sm.url as pattern_dispatcher_url,
+        coalesce(a.parent_id,
+        0) as parent_id,
+        coalesce(b.con,
+        0) as con  
+    from
+        sys_authorization as a 
+    LEFT join
+        (
+            select
+                parent_id,
+                count(1) as con 
+            from
+                sys_authorization 
+            GROUP by
+                parent_id 
+        ) as b  
+            on a.id = b.parent_id  
+    left join
+        sys_menu sm 
+            on a.sys_menu_id = sm.id 
+    where
+        sys_roles_id in (
+            ?
+        ) 
+        and coalesce(a.parent_id, 0) = ?
+Hibernate: 
+    select
+        a.id as id ,
+        sm.menus_name as name_menu,
+        sm.url as pattern_dispatcher_url,
+        coalesce(a.parent_id,
+        0) as parent_id,
+        coalesce(b.con,
+        0) as con  
+    from
+        sys_authorization as a 
+    LEFT join
+        (
+            select
+                parent_id,
+                count(1) as con 
+            from
+                sys_authorization 
+            GROUP by
+                parent_id 
+        ) as b  
+            on a.id = b.parent_id  
+    left join
+        sys_menu sm 
+            on a.sys_menu_id = sm.id 
+    where
+        sys_roles_id in (
+            ?
+        ) 
+        and coalesce(a.parent_id, 0) = ?
+Hibernate: 
+    select
+        a.id as id ,
+        sm.menus_name as name_menu,
+        sm.url as pattern_dispatcher_url,
+        coalesce(a.parent_id,
+        0) as parent_id,
+        coalesce(b.con,
+        0) as con  
+    from
+        sys_authorization as a 
+    LEFT join
+        (
+            select
+                parent_id,
+                count(1) as con 
+            from
+                sys_authorization 
+            GROUP by
+                parent_id 
+        ) as b  
+            on a.id = b.parent_id  
+    left join
+        sys_menu sm 
+            on a.sys_menu_id = sm.id 
+    where
+        sys_roles_id in (
+            ?
+        ) 
+        and coalesce(a.parent_id, 0) = ?
+Hibernate: 
+    select
+        a.id as id ,
+        sm.menus_name as name_menu,
+        sm.url as pattern_dispatcher_url,
+        coalesce(a.parent_id,
+        0) as parent_id,
+        coalesce(b.con,
+        0) as con  
+    from
+        sys_authorization as a 
+    LEFT join
+        (
+            select
+                parent_id,
+                count(1) as con 
+            from
+                sys_authorization 
+            GROUP by
+                parent_id 
+        ) as b  
+            on a.id = b.parent_id  
+    left join
+        sys_menu sm 
+            on a.sys_menu_id = sm.id 
+    where
+        sys_roles_id in (
+            ?
+        ) 
+        and coalesce(a.parent_id, 0) = ?
+Hibernate: 
+    select
+        rolesmodel0_.id as id1_3_,
+        rolesmodel0_.created_by as created_2_3_,
+        rolesmodel0_.created_time as created_3_3_,
+        rolesmodel0_.disabled as disabled4_3_,
+        rolesmodel0_.modified_by as modified5_3_,
+        rolesmodel0_.modified_time as modified6_3_,
+        rolesmodel0_.version as version7_3_,
+        rolesmodel0_.role_name as role_nam8_3_ 
+    from
+        sys_roles rolesmodel0_
+Hibernate: 
+    select
+        menusmodel0_.id as id1_2_,
+        menusmodel0_.created_by as created_2_2_,
+        menusmodel0_.created_time as created_3_2_,
+        menusmodel0_.disabled as disabled4_2_,
+        menusmodel0_.modified_by as modified5_2_,
+        menusmodel0_.modified_time as modified6_2_,
+        menusmodel0_.version as version7_2_,
+        menusmodel0_.menus_name as menus_na8_2_,
+        menusmodel0_.url as url9_2_ 
+    from
+        sys_menu menusmodel0_
+Hibernate: 
+    select
+        authorizat0_.id as id1_1_,
+        authorizat0_.created_by as created_2_1_,
+        authorizat0_.created_time as created_3_1_,
+        authorizat0_.disabled as disabled4_1_,
+        authorizat0_.modified_by as modified5_1_,
+        authorizat0_.modified_time as modified6_1_,
+        authorizat0_.version as version7_1_,
+        authorizat0_.is_delete as is_delet8_1_,
+        authorizat0_.is_insert as is_inser9_1_,
+        authorizat0_.is_read as is_read10_1_,
+        authorizat0_.is_update as is_upda11_1_,
+        authorizat0_.parent_id as parent_12_1_,
+        authorizat0_.sys_menu_id as sys_men13_1_,
+        authorizat0_.sys_roles_id as sys_rol14_1_ 
+    from
+        sys_authorization authorizat0_ cross 
+    join
+        sys_menu menusmodel1_ 
+    where
+        authorizat0_.sys_menu_id=menusmodel1_.id 
+        and authorizat0_.sys_roles_id=? 
+        and (
+            menusmodel1_.menus_name is not null
+        )
+Hibernate: 
+    select
+        count(authorizat0_.id) as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.sys_roles_id=?
+Hibernate: 
+    select
+        authorizat0_.id as id1_1_0_,
+        rolesmodel1_.id as id1_3_1_,
+        menusmodel2_.id as id1_2_2_,
+        authorizat0_.created_by as created_2_1_0_,
+        authorizat0_.created_time as created_3_1_0_,
+        authorizat0_.disabled as disabled4_1_0_,
+        authorizat0_.modified_by as modified5_1_0_,
+        authorizat0_.modified_time as modified6_1_0_,
+        authorizat0_.version as version7_1_0_,
+        authorizat0_.is_delete as is_delet8_1_0_,
+        authorizat0_.is_insert as is_inser9_1_0_,
+        authorizat0_.is_read as is_read10_1_0_,
+        authorizat0_.is_update as is_upda11_1_0_,
+        authorizat0_.parent_id as parent_12_1_0_,
+        authorizat0_.sys_menu_id as sys_men13_1_0_,
+        authorizat0_.sys_roles_id as sys_rol14_1_0_,
+        rolesmodel1_.created_by as created_2_3_1_,
+        rolesmodel1_.created_time as created_3_3_1_,
+        rolesmodel1_.disabled as disabled4_3_1_,
+        rolesmodel1_.modified_by as modified5_3_1_,
+        rolesmodel1_.modified_time as modified6_3_1_,
+        rolesmodel1_.version as version7_3_1_,
+        rolesmodel1_.role_name as role_nam8_3_1_,
+        menusmodel2_.created_by as created_2_2_2_,
+        menusmodel2_.created_time as created_3_2_2_,
+        menusmodel2_.disabled as disabled4_2_2_,
+        menusmodel2_.modified_by as modified5_2_2_,
+        menusmodel2_.modified_time as modified6_2_2_,
+        menusmodel2_.version as version7_2_2_,
+        menusmodel2_.menus_name as menus_na8_2_2_,
+        menusmodel2_.url as url9_2_2_ 
+    from
+        sys_authorization authorizat0_ 
+    inner join
+        sys_roles rolesmodel1_ 
+            on authorizat0_.sys_roles_id=rolesmodel1_.id 
+    inner join
+        sys_menu menusmodel2_ 
+            on authorizat0_.sys_menu_id=menusmodel2_.id 
+    where
+        rolesmodel1_.id=? 
+        and (
+            menusmodel2_.menus_name is not null
+        ) limit ?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        rolesmodel0_.id as id1_3_,
+        rolesmodel0_.created_by as created_2_3_,
+        rolesmodel0_.created_time as created_3_3_,
+        rolesmodel0_.disabled as disabled4_3_,
+        rolesmodel0_.modified_by as modified5_3_,
+        rolesmodel0_.modified_time as modified6_3_,
+        rolesmodel0_.version as version7_3_,
+        rolesmodel0_.role_name as role_nam8_3_ 
+    from
+        sys_roles rolesmodel0_ 
+    where
+        rolesmodel0_.role_name in (
+            ?
+        ) 
+    order by
+        rolesmodel0_.id desc
+Hibernate: 
+    select
+        a.id as id ,
+        sm.menus_name as name_menu,
+        sm.url as pattern_dispatcher_url,
+        coalesce(a.parent_id,
+        0) as parent_id,
+        coalesce(b.con,
+        0) as con  
+    from
+        sys_authorization as a 
+    LEFT join
+        (
+            select
+                parent_id,
+                count(1) as con 
+            from
+                sys_authorization 
+            GROUP by
+                parent_id 
+        ) as b  
+            on a.id = b.parent_id  
+    left join
+        sys_menu sm 
+            on a.sys_menu_id = sm.id 
+    where
+        sys_roles_id in (
+            ?
+        ) 
+        and coalesce(a.parent_id, 0) = ?
+Hibernate: 
+    select
+        a.id as id ,
+        sm.menus_name as name_menu,
+        sm.url as pattern_dispatcher_url,
+        coalesce(a.parent_id,
+        0) as parent_id,
+        coalesce(b.con,
+        0) as con  
+    from
+        sys_authorization as a 
+    LEFT join
+        (
+            select
+                parent_id,
+                count(1) as con 
+            from
+                sys_authorization 
+            GROUP by
+                parent_id 
+        ) as b  
+            on a.id = b.parent_id  
+    left join
+        sys_menu sm 
+            on a.sys_menu_id = sm.id 
+    where
+        sys_roles_id in (
+            ?
+        ) 
+        and coalesce(a.parent_id, 0) = ?
+Hibernate: 
+    select
+        a.id as id ,
+        sm.menus_name as name_menu,
+        sm.url as pattern_dispatcher_url,
+        coalesce(a.parent_id,
+        0) as parent_id,
+        coalesce(b.con,
+        0) as con  
+    from
+        sys_authorization as a 
+    LEFT join
+        (
+            select
+                parent_id,
+                count(1) as con 
+            from
+                sys_authorization 
+            GROUP by
+                parent_id 
+        ) as b  
+            on a.id = b.parent_id  
+    left join
+        sys_menu sm 
+            on a.sys_menu_id = sm.id 
+    where
+        sys_roles_id in (
+            ?
+        ) 
+        and coalesce(a.parent_id, 0) = ?
+Hibernate: 
+    select
+        a.id as id ,
+        sm.menus_name as name_menu,
+        sm.url as pattern_dispatcher_url,
+        coalesce(a.parent_id,
+        0) as parent_id,
+        coalesce(b.con,
+        0) as con  
+    from
+        sys_authorization as a 
+    LEFT join
+        (
+            select
+                parent_id,
+                count(1) as con 
+            from
+                sys_authorization 
+            GROUP by
+                parent_id 
+        ) as b  
+            on a.id = b.parent_id  
+    left join
+        sys_menu sm 
+            on a.sys_menu_id = sm.id 
+    where
+        sys_roles_id in (
+            ?
+        ) 
+        and coalesce(a.parent_id, 0) = ?
+Hibernate: 
+    select
+        a.id as id ,
+        sm.menus_name as name_menu,
+        sm.url as pattern_dispatcher_url,
+        coalesce(a.parent_id,
+        0) as parent_id,
+        coalesce(b.con,
+        0) as con  
+    from
+        sys_authorization as a 
+    LEFT join
+        (
+            select
+                parent_id,
+                count(1) as con 
+            from
+                sys_authorization 
+            GROUP by
+                parent_id 
+        ) as b  
+            on a.id = b.parent_id  
+    left join
+        sys_menu sm 
+            on a.sys_menu_id = sm.id 
+    where
+        sys_roles_id in (
+            ?
+        ) 
+        and coalesce(a.parent_id, 0) = ?
+Hibernate: 
+    select
+        rolesmodel0_.id as id1_3_,
+        rolesmodel0_.created_by as created_2_3_,
+        rolesmodel0_.created_time as created_3_3_,
+        rolesmodel0_.disabled as disabled4_3_,
+        rolesmodel0_.modified_by as modified5_3_,
+        rolesmodel0_.modified_time as modified6_3_,
+        rolesmodel0_.version as version7_3_,
+        rolesmodel0_.role_name as role_nam8_3_ 
+    from
+        sys_roles rolesmodel0_
+Hibernate: 
+    select
+        rolesmodel0_.id as id1_3_,
+        rolesmodel0_.created_by as created_2_3_,
+        rolesmodel0_.created_time as created_3_3_,
+        rolesmodel0_.disabled as disabled4_3_,
+        rolesmodel0_.modified_by as modified5_3_,
+        rolesmodel0_.modified_time as modified6_3_,
+        rolesmodel0_.version as version7_3_,
+        rolesmodel0_.role_name as role_nam8_3_ 
+    from
+        sys_roles rolesmodel0_ 
+    order by
+        rolesmodel0_.role_name asc limit ?
+Hibernate: 
+    select
+        count(*) as col_0_0_ 
+    from
+        sys_roles rolesmodel0_
+Hibernate: 
+    select
+        authorizat0_.id as id1_1_0_,
+        rolesmodel1_.id as id1_3_1_,
+        menusmodel2_.id as id1_2_2_,
+        authorizat0_.created_by as created_2_1_0_,
+        authorizat0_.created_time as created_3_1_0_,
+        authorizat0_.disabled as disabled4_1_0_,
+        authorizat0_.modified_by as modified5_1_0_,
+        authorizat0_.modified_time as modified6_1_0_,
+        authorizat0_.version as version7_1_0_,
+        authorizat0_.is_delete as is_delet8_1_0_,
+        authorizat0_.is_insert as is_inser9_1_0_,
+        authorizat0_.is_read as is_read10_1_0_,
+        authorizat0_.is_update as is_upda11_1_0_,
+        authorizat0_.parent_id as parent_12_1_0_,
+        authorizat0_.sys_menu_id as sys_men13_1_0_,
+        authorizat0_.sys_roles_id as sys_rol14_1_0_,
+        rolesmodel1_.created_by as created_2_3_1_,
+        rolesmodel1_.created_time as created_3_3_1_,
+        rolesmodel1_.disabled as disabled4_3_1_,
+        rolesmodel1_.modified_by as modified5_3_1_,
+        rolesmodel1_.modified_time as modified6_3_1_,
+        rolesmodel1_.version as version7_3_1_,
+        rolesmodel1_.role_name as role_nam8_3_1_,
+        menusmodel2_.created_by as created_2_2_2_,
+        menusmodel2_.created_time as created_3_2_2_,
+        menusmodel2_.disabled as disabled4_2_2_,
+        menusmodel2_.modified_by as modified5_2_2_,
+        menusmodel2_.modified_time as modified6_2_2_,
+        menusmodel2_.version as version7_2_2_,
+        menusmodel2_.menus_name as menus_na8_2_2_,
+        menusmodel2_.url as url9_2_2_ 
+    from
+        sys_authorization authorizat0_ 
+    inner join
+        sys_roles rolesmodel1_ 
+            on authorizat0_.sys_roles_id=rolesmodel1_.id 
+    inner join
+        sys_menu menusmodel2_ 
+            on authorizat0_.sys_menu_id=menusmodel2_.id 
+    where
+        rolesmodel1_.id=? 
+        and (
+            menusmodel2_.menus_name is not null
+        ) limit ?
+Hibernate: 
+    select
+        count(authorizat0_.id) as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.sys_roles_id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        rolesmodel0_.id as id1_3_,
+        rolesmodel0_.created_by as created_2_3_,
+        rolesmodel0_.created_time as created_3_3_,
+        rolesmodel0_.disabled as disabled4_3_,
+        rolesmodel0_.modified_by as modified5_3_,
+        rolesmodel0_.modified_time as modified6_3_,
+        rolesmodel0_.version as version7_3_,
+        rolesmodel0_.role_name as role_nam8_3_ 
+    from
+        sys_roles rolesmodel0_ 
+    where
+        rolesmodel0_.role_name in (
+            ?
+        ) 
+    order by
+        rolesmodel0_.id desc
+Hibernate: 
+    select
+        a.id as id ,
+        sm.menus_name as name_menu,
+        sm.url as pattern_dispatcher_url,
+        coalesce(a.parent_id,
+        0) as parent_id,
+        coalesce(b.con,
+        0) as con  
+    from
+        sys_authorization as a 
+    LEFT join
+        (
+            select
+                parent_id,
+                count(1) as con 
+            from
+                sys_authorization 
+            GROUP by
+                parent_id 
+        ) as b  
+            on a.id = b.parent_id  
+    left join
+        sys_menu sm 
+            on a.sys_menu_id = sm.id 
+    where
+        sys_roles_id in (
+            ?
+        ) 
+        and coalesce(a.parent_id, 0) = ?
+Hibernate: 
+    select
+        a.id as id ,
+        sm.menus_name as name_menu,
+        sm.url as pattern_dispatcher_url,
+        coalesce(a.parent_id,
+        0) as parent_id,
+        coalesce(b.con,
+        0) as con  
+    from
+        sys_authorization as a 
+    LEFT join
+        (
+            select
+                parent_id,
+                count(1) as con 
+            from
+                sys_authorization 
+            GROUP by
+                parent_id 
+        ) as b  
+            on a.id = b.parent_id  
+    left join
+        sys_menu sm 
+            on a.sys_menu_id = sm.id 
+    where
+        sys_roles_id in (
+            ?
+        ) 
+        and coalesce(a.parent_id, 0) = ?
+Hibernate: 
+    select
+        a.id as id ,
+        sm.menus_name as name_menu,
+        sm.url as pattern_dispatcher_url,
+        coalesce(a.parent_id,
+        0) as parent_id,
+        coalesce(b.con,
+        0) as con  
+    from
+        sys_authorization as a 
+    LEFT join
+        (
+            select
+                parent_id,
+                count(1) as con 
+            from
+                sys_authorization 
+            GROUP by
+                parent_id 
+        ) as b  
+            on a.id = b.parent_id  
+    left join
+        sys_menu sm 
+            on a.sys_menu_id = sm.id 
+    where
+        sys_roles_id in (
+            ?
+        ) 
+        and coalesce(a.parent_id, 0) = ?
+Hibernate: 
+    select
+        a.id as id ,
+        sm.menus_name as name_menu,
+        sm.url as pattern_dispatcher_url,
+        coalesce(a.parent_id,
+        0) as parent_id,
+        coalesce(b.con,
+        0) as con  
+    from
+        sys_authorization as a 
+    LEFT join
+        (
+            select
+                parent_id,
+                count(1) as con 
+            from
+                sys_authorization 
+            GROUP by
+                parent_id 
+        ) as b  
+            on a.id = b.parent_id  
+    left join
+        sys_menu sm 
+            on a.sys_menu_id = sm.id 
+    where
+        sys_roles_id in (
+            ?
+        ) 
+        and coalesce(a.parent_id, 0) = ?
+Hibernate: 
+    select
+        a.id as id ,
+        sm.menus_name as name_menu,
+        sm.url as pattern_dispatcher_url,
+        coalesce(a.parent_id,
+        0) as parent_id,
+        coalesce(b.con,
+        0) as con  
+    from
+        sys_authorization as a 
+    LEFT join
+        (
+            select
+                parent_id,
+                count(1) as con 
+            from
+                sys_authorization 
+            GROUP by
+                parent_id 
+        ) as b  
+            on a.id = b.parent_id  
+    left join
+        sys_menu sm 
+            on a.sys_menu_id = sm.id 
+    where
+        sys_roles_id in (
+            ?
+        ) 
+        and coalesce(a.parent_id, 0) = ?
+Hibernate: 
+    select
+        rolesmodel0_.id as id1_3_,
+        rolesmodel0_.created_by as created_2_3_,
+        rolesmodel0_.created_time as created_3_3_,
+        rolesmodel0_.disabled as disabled4_3_,
+        rolesmodel0_.modified_by as modified5_3_,
+        rolesmodel0_.modified_time as modified6_3_,
+        rolesmodel0_.version as version7_3_,
+        rolesmodel0_.role_name as role_nam8_3_ 
+    from
+        sys_roles rolesmodel0_
+Hibernate: 
+    select
+        usermodel0_.id as id1_4_,
+        usermodel0_.created_by as created_2_4_,
+        usermodel0_.created_time as created_3_4_,
+        usermodel0_.disabled as disabled4_4_,
+        usermodel0_.modified_by as modified5_4_,
+        usermodel0_.modified_time as modified6_4_,
+        usermodel0_.version as version7_4_,
+        usermodel0_.email as email8_4_,
+        usermodel0_.is_active as is_activ9_4_,
+        usermodel0_.name as name10_4_,
+        usermodel0_.no_hp as no_hp11_4_,
+        usermodel0_.password as passwor12_4_,
+        usermodel0_.username as usernam13_4_ 
+    from
+        sys_user usermodel0_ 
+    order by
+        usermodel0_.username asc limit ?
+Hibernate: 
+    select
+        userrolesm0_.sys_user_id as sys_user9_5_0_,
+        userrolesm0_.id as id1_5_0_,
+        userrolesm0_.id as id1_5_1_,
+        userrolesm0_.created_by as created_2_5_1_,
+        userrolesm0_.created_time as created_3_5_1_,
+        userrolesm0_.disabled as disabled4_5_1_,
+        userrolesm0_.modified_by as modified5_5_1_,
+        userrolesm0_.modified_time as modified6_5_1_,
+        userrolesm0_.version as version7_5_1_,
+        userrolesm0_.sys_roles_id as sys_role8_5_1_,
+        rolesmodel1_.id as id1_3_2_,
+        rolesmodel1_.created_by as created_2_3_2_,
+        rolesmodel1_.created_time as created_3_3_2_,
+        rolesmodel1_.disabled as disabled4_3_2_,
+        rolesmodel1_.modified_by as modified5_3_2_,
+        rolesmodel1_.modified_time as modified6_3_2_,
+        rolesmodel1_.version as version7_3_2_,
+        rolesmodel1_.role_name as role_nam8_3_2_ 
+    from
+        sys_user_roles userrolesm0_ 
+    inner join
+        sys_roles rolesmodel1_ 
+            on userrolesm0_.sys_roles_id=rolesmodel1_.id 
+    where
+        userrolesm0_.sys_user_id=?
+Hibernate: 
+    select
+        count(*) as col_0_0_ 
+    from
+        sys_user usermodel0_
+Hibernate: 
+    select
+        userrolesm0_.sys_user_id as sys_user9_5_0_,
+        userrolesm0_.id as id1_5_0_,
+        userrolesm0_.id as id1_5_1_,
+        userrolesm0_.created_by as created_2_5_1_,
+        userrolesm0_.created_time as created_3_5_1_,
+        userrolesm0_.disabled as disabled4_5_1_,
+        userrolesm0_.modified_by as modified5_5_1_,
+        userrolesm0_.modified_time as modified6_5_1_,
+        userrolesm0_.version as version7_5_1_,
+        userrolesm0_.sys_roles_id as sys_role8_5_1_,
+        rolesmodel1_.id as id1_3_2_,
+        rolesmodel1_.created_by as created_2_3_2_,
+        rolesmodel1_.created_time as created_3_3_2_,
+        rolesmodel1_.disabled as disabled4_3_2_,
+        rolesmodel1_.modified_by as modified5_3_2_,
+        rolesmodel1_.modified_time as modified6_3_2_,
+        rolesmodel1_.version as version7_3_2_,
+        rolesmodel1_.role_name as role_nam8_3_2_ 
+    from
+        sys_user_roles userrolesm0_ 
+    inner join
+        sys_roles rolesmodel1_ 
+            on userrolesm0_.sys_roles_id=rolesmodel1_.id 
+    where
+        userrolesm0_.sys_user_id=?
+Hibernate: 
+    select
+        userrolesm0_.sys_user_id as sys_user9_5_0_,
+        userrolesm0_.id as id1_5_0_,
+        userrolesm0_.id as id1_5_1_,
+        userrolesm0_.created_by as created_2_5_1_,
+        userrolesm0_.created_time as created_3_5_1_,
+        userrolesm0_.disabled as disabled4_5_1_,
+        userrolesm0_.modified_by as modified5_5_1_,
+        userrolesm0_.modified_time as modified6_5_1_,
+        userrolesm0_.version as version7_5_1_,
+        userrolesm0_.sys_roles_id as sys_role8_5_1_,
+        rolesmodel1_.id as id1_3_2_,
+        rolesmodel1_.created_by as created_2_3_2_,
+        rolesmodel1_.created_time as created_3_3_2_,
+        rolesmodel1_.disabled as disabled4_3_2_,
+        rolesmodel1_.modified_by as modified5_3_2_,
+        rolesmodel1_.modified_time as modified6_3_2_,
+        rolesmodel1_.version as version7_3_2_,
+        rolesmodel1_.role_name as role_nam8_3_2_ 
+    from
+        sys_user_roles userrolesm0_ 
+    inner join
+        sys_roles rolesmodel1_ 
+            on userrolesm0_.sys_roles_id=rolesmodel1_.id 
+    where
+        userrolesm0_.sys_user_id=?
+Hibernate: 
+    select
+        userrolesm0_.sys_user_id as sys_user9_5_0_,
+        userrolesm0_.id as id1_5_0_,
+        userrolesm0_.id as id1_5_1_,
+        userrolesm0_.created_by as created_2_5_1_,
+        userrolesm0_.created_time as created_3_5_1_,
+        userrolesm0_.disabled as disabled4_5_1_,
+        userrolesm0_.modified_by as modified5_5_1_,
+        userrolesm0_.modified_time as modified6_5_1_,
+        userrolesm0_.version as version7_5_1_,
+        userrolesm0_.sys_roles_id as sys_role8_5_1_,
+        rolesmodel1_.id as id1_3_2_,
+        rolesmodel1_.created_by as created_2_3_2_,
+        rolesmodel1_.created_time as created_3_3_2_,
+        rolesmodel1_.disabled as disabled4_3_2_,
+        rolesmodel1_.modified_by as modified5_3_2_,
+        rolesmodel1_.modified_time as modified6_3_2_,
+        rolesmodel1_.version as version7_3_2_,
+        rolesmodel1_.role_name as role_nam8_3_2_ 
+    from
+        sys_user_roles userrolesm0_ 
+    inner join
+        sys_roles rolesmodel1_ 
+            on userrolesm0_.sys_roles_id=rolesmodel1_.id 
+    where
+        userrolesm0_.sys_user_id=?
+Hibernate: 
+    select
+        authorizat0_.id as id1_1_0_,
+        rolesmodel1_.id as id1_3_1_,
+        menusmodel2_.id as id1_2_2_,
+        authorizat0_.created_by as created_2_1_0_,
+        authorizat0_.created_time as created_3_1_0_,
+        authorizat0_.disabled as disabled4_1_0_,
+        authorizat0_.modified_by as modified5_1_0_,
+        authorizat0_.modified_time as modified6_1_0_,
+        authorizat0_.version as version7_1_0_,
+        authorizat0_.is_delete as is_delet8_1_0_,
+        authorizat0_.is_insert as is_inser9_1_0_,
+        authorizat0_.is_read as is_read10_1_0_,
+        authorizat0_.is_update as is_upda11_1_0_,
+        authorizat0_.parent_id as parent_12_1_0_,
+        authorizat0_.sys_menu_id as sys_men13_1_0_,
+        authorizat0_.sys_roles_id as sys_rol14_1_0_,
+        rolesmodel1_.created_by as created_2_3_1_,
+        rolesmodel1_.created_time as created_3_3_1_,
+        rolesmodel1_.disabled as disabled4_3_1_,
+        rolesmodel1_.modified_by as modified5_3_1_,
+        rolesmodel1_.modified_time as modified6_3_1_,
+        rolesmodel1_.version as version7_3_1_,
+        rolesmodel1_.role_name as role_nam8_3_1_,
+        menusmodel2_.created_by as created_2_2_2_,
+        menusmodel2_.created_time as created_3_2_2_,
+        menusmodel2_.disabled as disabled4_2_2_,
+        menusmodel2_.modified_by as modified5_2_2_,
+        menusmodel2_.modified_time as modified6_2_2_,
+        menusmodel2_.version as version7_2_2_,
+        menusmodel2_.menus_name as menus_na8_2_2_,
+        menusmodel2_.url as url9_2_2_ 
+    from
+        sys_authorization authorizat0_ 
+    inner join
+        sys_roles rolesmodel1_ 
+            on authorizat0_.sys_roles_id=rolesmodel1_.id 
+    inner join
+        sys_menu menusmodel2_ 
+            on authorizat0_.sys_menu_id=menusmodel2_.id 
+    where
+        rolesmodel1_.id=? 
+        and (
+            menusmodel2_.menus_name is not null
+        ) limit ?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        count(authorizat0_.id) as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.sys_roles_id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        rolesmodel0_.id as id1_3_,
+        rolesmodel0_.created_by as created_2_3_,
+        rolesmodel0_.created_time as created_3_3_,
+        rolesmodel0_.disabled as disabled4_3_,
+        rolesmodel0_.modified_by as modified5_3_,
+        rolesmodel0_.modified_time as modified6_3_,
+        rolesmodel0_.version as version7_3_,
+        rolesmodel0_.role_name as role_nam8_3_ 
+    from
+        sys_roles rolesmodel0_ 
+    order by
+        rolesmodel0_.role_name asc limit ?
+Hibernate: 
+    select
+        count(*) as col_0_0_ 
+    from
+        sys_roles rolesmodel0_
+Hibernate: 
+    select
+        menusmodel0_.id as id1_2_,
+        menusmodel0_.created_by as created_2_2_,
+        menusmodel0_.created_time as created_3_2_,
+        menusmodel0_.disabled as disabled4_2_,
+        menusmodel0_.modified_by as modified5_2_,
+        menusmodel0_.modified_time as modified6_2_,
+        menusmodel0_.version as version7_2_,
+        menusmodel0_.menus_name as menus_na8_2_,
+        menusmodel0_.url as url9_2_ 
+    from
+        sys_menu menusmodel0_ 
+    where
+        menusmodel0_.menus_name like ? 
+    order by
+        menusmodel0_.menus_name asc limit ?
+Hibernate: 
+    select
+        count(*) as col_0_0_ 
+    from
+        sys_menu menusmodel0_
+Hibernate: 
+    select
+        authorizat0_.id as id1_1_0_,
+        rolesmodel1_.id as id1_3_1_,
+        menusmodel2_.id as id1_2_2_,
+        authorizat0_.created_by as created_2_1_0_,
+        authorizat0_.created_time as created_3_1_0_,
+        authorizat0_.disabled as disabled4_1_0_,
+        authorizat0_.modified_by as modified5_1_0_,
+        authorizat0_.modified_time as modified6_1_0_,
+        authorizat0_.version as version7_1_0_,
+        authorizat0_.is_delete as is_delet8_1_0_,
+        authorizat0_.is_insert as is_inser9_1_0_,
+        authorizat0_.is_read as is_read10_1_0_,
+        authorizat0_.is_update as is_upda11_1_0_,
+        authorizat0_.parent_id as parent_12_1_0_,
+        authorizat0_.sys_menu_id as sys_men13_1_0_,
+        authorizat0_.sys_roles_id as sys_rol14_1_0_,
+        rolesmodel1_.created_by as created_2_3_1_,
+        rolesmodel1_.created_time as created_3_3_1_,
+        rolesmodel1_.disabled as disabled4_3_1_,
+        rolesmodel1_.modified_by as modified5_3_1_,
+        rolesmodel1_.modified_time as modified6_3_1_,
+        rolesmodel1_.version as version7_3_1_,
+        rolesmodel1_.role_name as role_nam8_3_1_,
+        menusmodel2_.created_by as created_2_2_2_,
+        menusmodel2_.created_time as created_3_2_2_,
+        menusmodel2_.disabled as disabled4_2_2_,
+        menusmodel2_.modified_by as modified5_2_2_,
+        menusmodel2_.modified_time as modified6_2_2_,
+        menusmodel2_.version as version7_2_2_,
+        menusmodel2_.menus_name as menus_na8_2_2_,
+        menusmodel2_.url as url9_2_2_ 
+    from
+        sys_authorization authorizat0_ 
+    inner join
+        sys_roles rolesmodel1_ 
+            on authorizat0_.sys_roles_id=rolesmodel1_.id 
+    inner join
+        sys_menu menusmodel2_ 
+            on authorizat0_.sys_menu_id=menusmodel2_.id 
+    where
+        rolesmodel1_.id=? 
+        and (
+            menusmodel2_.menus_name is not null
+        ) limit ?
+Hibernate: 
+    select
+        count(authorizat0_.id) as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.sys_roles_id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
+Hibernate: 
+    select
+        authorizat0_.parent_id as col_0_0_ 
+    from
+        sys_authorization authorizat0_ 
+    where
+        authorizat0_.id=?
